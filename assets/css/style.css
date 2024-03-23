@@ -1,0 +1,38 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+#logo{
+	position:absolute;
+	z-index: 2;
+	top:20px;
+	left:150px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+}
+
+#logo img{
+	max-width: 10%;
+}
+
+h1{
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 576px) {
+
+	
+	}
+	
