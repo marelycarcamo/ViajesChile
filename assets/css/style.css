@@ -3,28 +3,68 @@
 	margin: 0px;
 }
 
-#logo{
-	position:absolute;
-	z-index: 2;
-	top:20px;
-	left:150px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+body{
+	background-color: black;
+	color: white
+}
 
+
+roboto-thin {
+	font-family: "Roboto", sans-serif;
+	font-weight: 100;
+	font-style: normal;
+  }
+  
+ body, .roboto-light {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+  }
+  
+  .roboto-regular {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+  
+  .roboto-medium {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+  }
+  
+  .roboto-bold {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+  }
+
+
+
+
+.bg-viajes{
+	background-color: aqua;
+}
+
+h2{
+	margin-block: 20px;
+}
+
+#logo{
+	left:150px;
 }
 
 #logo img{
 	max-width: 10%;
 }
 
-h1{
-	color: white;
+.navbar,#logo{
+	top: 20px;
 }
 
-
-
-
+li{
+	font-size: 20px;
+}
 
 
 
