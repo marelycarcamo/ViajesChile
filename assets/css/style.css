@@ -9,7 +9,7 @@ body{
 }
 
 
-roboto-thin {
+.roboto-thin {
 	font-family: "Roboto", sans-serif;
 	font-weight: 100;
 	font-style: normal;
@@ -40,39 +40,109 @@ roboto-thin {
   }
 
 
-
-
 .bg-viajes{
-	background-color: aqua;
+	background-color:rgba(0, 234, 255, 0.943);
 }
 
 h2{
-	margin-block: 20px;
+	margin-block: 50px;
 }
 
-#logo{
+/* #logo{
 	left:150px;
+	
+}*/
+
+.carousel-item img{
+	width: 100%;
+	height: auto;
+	max-height: 720px;
 }
 
 #logo img{
 	max-width: 10%;
+} 
+
+.navbar{
+	top: 20px;
+	border: 1px solid magenta;
 }
 
-.navbar,#logo{
-	top: 20px;
+.navbar-nav {
+	position: absolute;
+	right: 154px; /*ok*/
+	border: 1px solid red;
 }
 
 li{
 	font-size: 20px;
 }
 
+li :hover{
+	background-color: black;
+	
+	
+}
+
+i{
+	font-size: 30px;
+	padding-inline: 5px;
+	
+}
+
+.row div{
+	display: flex;
+	
+	flex-direction: column;
+	align-items: center;
+}
+
+.card img{
+	width: 100%;
+	height: auto;
+	max-height: 190px;
+}
+
+footer{
+	height: 100px;
+	margin-top: 50px;
+	padding-inline: 6%;
+}
+
+footer div p{
+	font-size: 30px;
+
+}
 
 
+h3 :hover{
+	color:black;
+}
 
+footer div a :hover{
+	color: black;
+}
 
+html {
+	scroll-behavior: smooth;
+}
 
 @media only screen and (max-width: 576px) {
-
-	
+	#quienes-somos-section{
+		display:none;
 	}
-	
+
+	.card{
+		margin-bottom: 3%;
+	}
+
+	ul :nth-child(2){
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.navbar-nav{
+		margin-top: 20px;
+	}
+}

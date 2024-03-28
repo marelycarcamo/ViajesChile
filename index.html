@@ -4,10 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="marely" />
-		<!-- FONT ROBOTO -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<!-- GOOGLE FONT ROBOTO -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+			rel="stylesheet" />
 		<!-- bootstrap 5.3 -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -22,109 +24,185 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="shortcut icon" href="#assets/img/logo.svg" type="image/x-icon" />
 		<title>Viajes Chile</title>
 	</head>
 	<body>
+		<header id="inicio">
+			<!-- **********************+  C A R R U S E L ******************* -->
 
-		<header>
-
-		<div id="logo" class="z-2 position-absolute d-flex flex-row align-items-center">
-			<img src="assets/img/viajes.svg" alt="logo-viajes-chile" />
-			<h1 class="text-white">&nbsp;&nbsp;Viajes Chile</h1>
-		</div>
-
-
-
-		<!-- **********************+  C A R R U S E L ******************* -->
-
-		<div id="carouselExampleIndicators" class="carousel slide data-bs-ride="carousel z-0 position-relative">
-			<div class="carousel-indicators">
+			<div
+				id="carouselExampleIndicators"
+				class="carousel slide data-bs-ride=carousel z-0 position-relative">
+				<div class="carousel-indicators">
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="0"
+						class="active"
+						aria-current="true"
+						aria-label="Slide 1"></button>
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="1"
+						aria-label="Slide 2"></button>
+					<button
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide-to="2"
+						aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img
+							src="assets/img/carousel1.jpg"
+							class="d-block w-100"
+							alt="imagen desierto de atacama" />
+					</div>
+					<div class="carousel-item">
+						<img
+							src="assets/img/carousel2.jpg"
+							class="d-block w-100"
+							alt="imagen isla de pascua" />
+					</div>
+					<div class="carousel-item">
+						<img
+							src="assets/img/carousel3.jpg"
+							class="d-block w-100"
+							alt="imagen pinguino magallanico" />
+					</div>
+				</div>
 				<button
+					class="carousel-control-prev"
 					type="button"
 					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide-to="0"
-					class="active"
-					aria-current="true"
-					aria-label="Slide 1"></button>
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
 				<button
+					class="carousel-control-next"
 					type="button"
 					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide-to="1"
-					aria-label="Slide 2"></button>
-				<button
-					type="button"
-					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide-to="2"
-					aria-label="Slide 3"></button>
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
 			</div>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src="assets/img/carousel1.jpg" class="d-block w-100" alt="..." />
+
+			<!-- ******************* N A V B A R ******************* -->
+
+			<!-- Grey with black text -->
+			<nav
+				class="navbar navbar-expand-lg text-bg-transparent z-1 position-absolute">
+				<div class="container-fluid">
+					<div id="logo" class="d-flex flex-row align-items-center">
+						<img src="assets/img/logo.svg" alt="logo-viajes-chile" />
+						<h1 class="text-white" href="#inicio">&nbsp;&nbsp;Viajes Chile</h1>
+					</div>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active text-white" href="#inicio">Inicio</a>
+						</li>
+						<li class="nav-item d-sm-none d-md-block">
+							<a class="nav-link text-white" href="#quienes-somos-section"
+								>Quienes Somos</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#destacados-section"
+								>Destacados</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#form-section">Contacto</a>
+						</li>
+					</ul>
 				</div>
-				<div class="carousel-item">
-					<img src="assets/img/carousel2.jpg" class="d-block w-100" alt="..." />
-				</div>
-				<div class="carousel-item">
-					<img src="assets/img/carousel3.jpg" class="d-block w-100" alt="..." />
-				</div>
-			</div>
-			<button
-				class="carousel-control-prev"
-				type="button"
-				data-bs-target="#carouselExampleIndicators"
-				data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button
-				class="carousel-control-next"
-				type="button"
-				data-bs-target="#carouselExampleIndicators"
-				data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
-		</div>
-
-
-
-
-				<!-- ******************* N A V B A R ******************* -->
-
-		<!-- Grey with black text -->
-		<nav class="navbar navbar-expand-lg text-bg-transparent z-1 offset-md-8 position-absolute">
-			<div class="container-fluid">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link active text-white" href="#">Inicio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#">Quienes Somos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#">Destacados</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#">Contacto</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
+			</nav>
 		</header>
 
-		<div class="container-fluid bg-black"></div>
-		<div></div>
-		<h2 class="text-center">¿QUIENES SOMOS?</h2>
+		<div class="container">
+			<!-- *************** SECCION QUIENES SOMOS **************** -->
+			<section id="quienes-somos-section" class="d-sm-none d-md-block">
+				<h2 class="text-center">¿QUIENES SOMOS?</h2>
+				<div class="row">
+					<div class="col-4">
+						<p class="w-100 bg-viajes text-center">
+							<i class="fa-solid fa-plane"></i>
+						</p>
+						<p class="p-text px-4"></p>
+					</div>
+					<div class="col-4">
+						<p class="p-text px-4"></p>
+						<p class="w-100 bg-viajes text-center">
+							<i class="fa-solid fa-mountain"></i>
+						</p>
+					</div>
+					<div class="col-4">
+						<p class="w-100 bg-viajes text-center">
+							<i class="fa-solid fa-route"></i>
+						</p>
+						<p class="p-text px-4"></p>
+					</div>
+				</div>
+			</section>
 
-		<div class="col-4">
-			<div class="bg-viajes"></div>
-			<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nostrum deserunt cum, suscipit rem debitis eos dolorum voluptates distinctio laboriosam incidunt ad voluptatum provident nemo accusantium molestias, assumenda nihil veritatis illo. Id vel, commodi atque debitis sunt dignissimos iste laborum iusto ducimus eos nostrum consequuntur, ipsum amet eveniet distinctio corrupti. Eum explicabo non eius molestiae placeat asperiores provident fugiat quibusdam minus quo repudiandae, possimus similique nulla rem at quam consequatur consequuntur aspernatur accusantium libero a quidem ab. Repellendus aut quod reprehenderit necessitatibus minima dolorum illo ipsam quam asperiores. Ex ullam, autem similique officiis earum doloremque. Cum numquam neque hic eveniet.
-			</p>
+			<!-- ******* SECCION DESTACADOS ( CARDS ) ***************-->
+
+			<section id="destacados-section">
+				<h2 class="text-center">DESTACADOS</h2>
+				<div id="tarjetas-destacados" class="row">
+				
+					<!-- aquí van las cards -->
+
+				</div>
+			</section>
+
+			<!-- ¨*************** FORMULARIO *************** -->
+			<section id="form-section">
+				<h2 class="text-center">CONTACTO</h2>
+				<div class="mb-3">
+					<label for="form-input-nombre" class="form-label">Nombre</label>
+					<input type="text" class="form-control" id="form-input-nombre" />
+				</div>
+				<div class="mb-3">
+					<label for="form-input-asunto" class="form-label">Asunto</label>
+					<input type="text" class="form-control" id="form-input-asunto" />
+				</div>
+				<div class="mb-3">
+					<label for="form-textarea-mensaje" class="form-label">Mensaje</label>
+					<textarea
+						class="form-control"
+						id="form-textarea-mensaje"
+						rows="3"></textarea>
+				</div>
+				<div class="mb-3">
+					<button
+						id="enviarFormulario"
+						type="submit"
+						class="btn btn-lg bg-viajes text-white mb-3">
+						Enviar
+					</button>
+				</div>
+			</section>
 		</div>
-		<div class="col-4"></div>
-		<div class="col-4"></div>
+		<!-- **************** F O O T E R **************** -->
+
+		<footer
+			class="bg-viajes text-white d-flex flex-row justify-content-between align-items-center g-xxl-0">
+			<div>
+				<a href="#inicio" class="text-white text-decoration-none"
+					><h3>Viajes Chile</h3></a
+				>
+			</div>
+			<div id="icons-box" class="d-flex flex-row align-content-end">
+
+				<!-- aquí van los iconos -->
+
+			</div>
+		</footer>
 
 		<!-- POPPERSJS 2.11-->
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
@@ -134,6 +212,7 @@
 			src="https://code.jquery.com/jquery-3.7.1.js"
 			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
 			crossorigin="anonymous"></script>
+
 		<!-- BOOTSTRAP JS 5.3  -->
 
 		<script
