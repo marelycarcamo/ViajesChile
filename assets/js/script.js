@@ -27,9 +27,6 @@ function crearCard(i) {
 	$("#tarjetas-destacados").append(new_card);
 }
 
-
-
-
 /**
  * The function `crearIconosRRSS` creates social media icons with corresponding links and appends them
  * to a specified container in the footer.
@@ -67,10 +64,6 @@ function crearIconosFooter(i) {
 	$("#icons-box").append(element);
 }
 
-
-
-
-
 /**
  * The function `crearArticle` dynamically creates articles with icons and text, alternating their
  * positions based on the index provided.
@@ -95,7 +88,7 @@ function crearArticle(i) {
 
 	var primero = div_iconos;
 	var segundo = p_texto;
-	
+
 	if (i % 2 == 0) {
 		primero = p_texto;
 		segundo = div_iconos;
@@ -111,17 +104,9 @@ function crearArticle(i) {
 	$("#article-box").append(articulo);
 }
 
-
-
-
-
-
-
 //   **************** BLOQUE PRINCIPAL  ***********************
 
-
 $(document).ready(function () {
-
 	// SECCION QUIENES SOMOS - Creación de artículos
 	for (let i = 1; i < 4; i++) {
 		crearArticle(i);
@@ -131,7 +116,6 @@ $(document).ready(function () {
 	for (let i = 1; i <= 4; i++) {
 		crearCard(i);
 	}
-
 
 	// FOOTER - ICONOS - Crear los iconos con enlaces a rrss
 	for (let i = 0; i <= 5; i++) {
@@ -151,5 +135,21 @@ correctamente"); });` is setting up a click event listener on an element with th
 formulario fue enviado correctamente", which means "The form was submitted successfully" in Spanish. */
 	$("#enviarFormulario").click(function () {
 		alert("El formulario fue enviado correctamente");
+	});
+
+
+
+
+	
+	$(document).ready(function () {
+		$(window).scroll(function () {
+			var navbar = $("#navbar");
+			if ($(window).scrollTop() > 0) {
+				// Si te has desplazado hacia abajo
+				navbar.css("background-color", "black"); // Cambia el fondo a negro
+			} else {
+				navbar.css("background-color", "transparent"); // De lo contrario, hazlo transparente
+			}
+		});
 	});
 });

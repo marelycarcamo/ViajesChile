@@ -48,11 +48,6 @@ h2{
 	margin-block: 50px;
 }
 
-/* #logo{
-	left:150px;
-	
-}*/
-
 .carousel-item img{
 	width: 100%;
 	height: auto;
@@ -63,30 +58,30 @@ h2{
 	max-width: 10%;
 } 
 
-/* .container-fluid{
+.container-fluid{
 	border: 1px solid yellow;
-} */
+	width: 100wv;
 
-.navbar{
-	/* top: 20px; */
-	/* border: 1px solid magenta; */
-	/* width: 100vw; */
-	
 }
+
+
 
 .navbar-nav {
 	float: right; /* alinea a la derecha el menu desplegable */
-	/* position: absolute; */
-	right: 154px; /*ok*/
-	/* border: 1px solid red; */
+	position: absolute;
+	right: 10px; 
+	border: 1px solid red;
 }
 
 #navbar {
-border: 1px solid red;
-
     top: 0;
-    /* z-index: 1000; */
-	 /* Esto asegura que el menú esté por encima de otros elementos, como un carrusel */
+    z-index: 1000; 	/* Esto asegura que el menú esté por encima de otros elementos, como un carrusel */
+	transition: background-color 0.5s ease;
+	border:1px solid lime;/*este color no se ve*/
+	width: 100wv;
+	display: flex;
+	justify-content: end;
+	top: 20px;
 }
 
 
