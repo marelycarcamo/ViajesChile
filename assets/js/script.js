@@ -27,6 +27,9 @@ function crearCard(i) {
 	$("#tarjetas-destacados").append(new_card);
 }
 
+
+
+
 /**
  * The function `crearIconosRRSS` creates social media icons with corresponding links and appends them
  * to a specified container in the footer.
@@ -67,6 +70,7 @@ function crearIconosFooter(i) {
 
 
 
+
 /**
  * The function `crearArticle` dynamically creates articles with icons and text, alternating their
  * positions based on the index provided.
@@ -81,20 +85,20 @@ function crearArticle(i) {
 		"fa-solid fa-route",
 	];
 
-	let p_iconos = $(`<p p-icons class="w-100 bg-viajes text-center">
+	let div_iconos = $(`<div div-icons class="w-100 bg-viajes text-center">
 						<i class="${iconos[i - 1]}"></i>
-					</p>`);
+					</div>`);
 
 	let p_texto = $(
 		`<p class="p-text px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias facilis impedit officiis molestiae repellendus, aliquid amet. Voluptate, veniam dolores. At delectus nostrum aliquam ex! Ipsum, alias sequi odit et eveniet incidunt veniam dignissimos excepturi quia ullam in nesciunt accusamus ipsam dicta reiciendis voluptatibus optio quae, maxime ad vel placeat? Illo, sed amet fuga nesciunt pariatur quis perferendis, commodi voluptate eum necessitatibus ipsam sit veritatis nisi ducimus modi, praesentium nam. Incidunt temporibus fugit esse, ratione deleniti quas doloribus molestias soluta.</p> `
 	);
 
-	var primero = p_iconos;
+	var primero = div_iconos;
 	var segundo = p_texto;
 	
 	if (i % 2 == 0) {
 		primero = p_texto;
-		segundo = p_iconos;
+		segundo = div_iconos;
 	}
 
 	let articulo = $(`
@@ -106,6 +110,10 @@ function crearArticle(i) {
 
 	$("#article-box").append(articulo);
 }
+
+
+
+
 
 
 

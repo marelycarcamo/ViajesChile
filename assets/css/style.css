@@ -63,16 +63,33 @@ h2{
 	max-width: 10%;
 } 
 
+/* .container-fluid{
+	border: 1px solid yellow;
+} */
+
 .navbar{
-	top: 20px;
-	border: 1px solid magenta;
+	/* top: 20px; */
+	/* border: 1px solid magenta; */
+	/* width: 100vw; */
+	
 }
 
 .navbar-nav {
-	position: absolute;
+	float: right; /* alinea a la derecha el menu desplegable */
+	/* position: absolute; */
 	right: 154px; /*ok*/
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
+
+#navbar {
+border: 1px solid red;
+
+    top: 0;
+    /* z-index: 1000; */
+	 /* Esto asegura que el menú esté por encima de otros elementos, como un carrusel */
+}
+
+
 
 li{
 	font-size: 20px;
