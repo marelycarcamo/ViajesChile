@@ -1,138 +1,155 @@
-*{
+* {
 	padding: 0px;
 	margin: 0px;
 }
 
-body{
+body {
 	background-color: black;
-	color: white
+	color: white;
 }
 
-
-.roboto-thin {
-	font-family: "Roboto", sans-serif;
-	font-weight: 100;
-	font-style: normal;
-  }
-  
- body, .roboto-light {
+body,
+.roboto-light {
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
 	font-style: normal;
-  }
-  
-  .roboto-regular {
-	font-family: "Roboto", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-  }
-  
-  .roboto-medium {
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-  }
-  
-  .roboto-bold {
-	font-family: "Roboto", sans-serif;
-	font-weight: 700;
-	font-style: normal;
-  }
-
-
-.bg-viajes{
-	background-color:rgba(0, 234, 255, 0.943);
 }
 
-h2{
+.bg-viajes {
+	background-color: rgba(0, 234, 255, 0.943);
+}
+
+h2 {
 	margin-block: 50px;
 }
 
-.carousel-item img{
+.carousel-item img {
 	width: 100%;
 	height: auto;
 	max-height: 720px;
 }
 
-#logo img{
+#logo img {
 	max-width: 10%;
-} 
-
-.container-fluid{
-	border: 1px solid yellow;
-	width: 100wv;
-
 }
-
-
 
 .navbar-nav {
 	float: right; /* alinea a la derecha el menu desplegable */
 	position: absolute;
-	right: 10px; 
-	border: 1px solid red;
+	right: 10px;
+	/* border: 1px solid red; */
 }
 
 #navbar {
-    top: 0;
-    z-index: 1000; 	/* Esto asegura que el menú esté por encima de otros elementos, como un carrusel */
+	top: 0;
+	z-index: 1000; /* Esto asegura que el menú esté por encima de otros elementos, como un carrusel */
 	transition: background-color 0.5s ease;
-	border:1px solid lime;/*este color no se ve*/
-	width: 100wv;
 	display: flex;
 	justify-content: end;
-	top: 20px;
 }
 
+.navbar a {
+	color: white; /* Color del texto del menú */
+	transition: background-color 0.5s ease; /* Transición suave */
+}
 
+.navbar a:hover {
+	background-color: black; /* Cambia el fondo a negro al pasar el cursor */
+	color: white; /* Cambia el color del texto a blanco al pasar el cursor */
+}
 
-li{
+.navbar.scrolled a:hover {
+	background-color: rgba(0,234,255,0.943); /* Cambia el fondo a 'aqua' al pasar el cursor cuando se ha desplazado hacia abajo */
+	color: white; /* Mantiene el color del texto en blanco al pasar el cursor cuando se ha desplazado hacia abajo */
+}
+
+*************** li {
 	font-size: 20px;
 }
 
-li :hover{
-	background-color: black;
-	
-	
-}
-
-i{
+i {
 	font-size: 30px;
 	padding-inline: 5px;
-	
 }
 
-.row div{
+.row div {
 	display: flex;
-	
+
 	flex-direction: column;
 	align-items: center;
 }
 
-.card img{
+.card img {
 	width: 100%;
 	height: auto;
 	max-height: 190px;
 }
 
-footer{
+/* Definimos el estilo inicial de la card */
+.card {
+	transition: transform .5s, background-color .5s; /* Animación */
+	opacity: 80%;
+  }
+  
+  /* Definimos el estilo de la card cuando se pasa el cursor sobre ella */
+  .card:hover {
+	transform: scale(1.05); /* Agrandamos la card */
+	opacity: 100%; /* Oscurecemos la card */
+  }
+  
+
+
+
+/* Definimos el estilo inicial del botón */
+.btn {
+	background-color: rgba(0, 234, 255, 0.943);
+	opacity: 80%;
+	color: white;
+	border: none;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	transition: transform 0.5s; /* Animación */
+	cursor: pointer;
+}
+
+/* Definimos el estilo del botón cuando se pasa el cursor sobre él */
+.btn:hover {
+	background-color: rgba(0, 234, 255, 1); /* Intensificamos el color */
+	color:black;
+	transform: scale(1.1); /* Agrandamos el botón */
+	box-shadow: 0 0 10px rgba(0, 234, 255, 1); /* Agregamos un efecto de sombra para darle más énfasis */
+	opacity: 100%;
+}
+
+footer {
 	height: 100px;
 	margin-top: 50px;
 	padding-inline: 6%;
 }
 
-footer div p{
+footer div p {
 	font-size: 30px;
-
 }
 
-
-h3 :hover{
-	color:black;
-}
-
-footer div a :hover{
+h3 :hover {
 	color: black;
+}
+
+footer div a :hover {
+	color: black;
+}
+
+.tooltip.bs-tooltip-bottom .arrow::before,
+.tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+	border-bottom-color: rgba(
+		0,
+		234,
+		255,
+		0.943
+	); /* Color de la flecha del tooltip */
 }
 
 html {
@@ -140,21 +157,21 @@ html {
 }
 
 @media only screen and (max-width: 576px) {
-	#quienes-somos-section{
-		display:none;
+	#quienes-somos-section {
+		display: none;
 	}
 
-	.card{
+	.card {
 		margin-bottom: 3%;
 	}
 
-	ul :nth-child(2){
+	ul :nth-child(2) {
 		display: none;
 	}
 }
 
 @media only screen and (max-width: 992px) {
-	.navbar-nav{
+	.navbar-nav {
 		margin-top: 20px;
 	}
 }

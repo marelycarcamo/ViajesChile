@@ -1,4 +1,5 @@
 /**
+ * FUNCION CREAR CARDS
  * The function "crearTarjeta" generates a card element with dynamic image and text content and appends
  * it to a specified container on the webpage.
  * @param i - The parameter `i` in the `crearTarjeta` function is used to dynamically generate the
@@ -28,6 +29,7 @@ function crearCard(i) {
 }
 
 /**
+ *  FUNCION CREAR ICONOS RRSS
  * The function `crearIconosRRSS` creates social media icons with corresponding links and appends them
  * to a specified container in the footer.
  * @param i - The parameter `i` in the `crearIconosRRSS` function is used as an index to select the
@@ -52,6 +54,7 @@ function crearIconosFooter(i) {
 	];
 
 	// Creando el icono con sus respectivos enlaces.
+
 	let element = `<a	
 		class="text-white"
 		href="${enlaces[i]}"
@@ -64,7 +67,11 @@ function crearIconosFooter(i) {
 	$("#icons-box").append(element);
 }
 
+
+
+
 /**
+ * FUNCION CREAR ARTICULO      *******************
  * The function `crearArticle` dynamically creates articles with icons and text, alternating their
  * positions based on the index provided.
  * @param i - The `crearArticle` function you provided creates an article element with an icon and some
@@ -104,9 +111,25 @@ function crearArticle(i) {
 	$("#article-box").append(articulo);
 }
 
+
+
 //   **************** BLOQUE PRINCIPAL  ***********************
 
 $(document).ready(function () {
+
+
+	// NAVBAR - Cambia a fondo negro al desplazarse habia abajo
+	$(window).scroll(function () {
+		var navbar = $("#navbar");
+		if ($(window).scrollTop() > 700) {
+			navbar.css("background-color", "rgba(0, 0, 0, 0.7)"); // Cambia el fondo a negro con 50% de opacidad
+			navbar.addClass("scrolled"); // Agrega la clase 'scrolled'
+		} else {
+			navbar.css("background-color", "transparent"); // De lo contrario, hazlo transparente
+			navbar.removeClass("scrolled"); // Elimina la clase 'scrolled'
+		}
+	});
+
 	// SECCION QUIENES SOMOS - Creación de artículos
 	for (let i = 1; i < 4; i++) {
 		crearArticle(i);
@@ -117,39 +140,21 @@ $(document).ready(function () {
 		crearCard(i);
 	}
 
-	// FOOTER - ICONOS - Crear los iconos con enlaces a rrss
-	for (let i = 0; i <= 5; i++) {
-		crearIconosFooter(i);
-	}
-
-	/* The code `$('[data-toggle="tooltip"]').tooltip();` is setting up a tooltip functionality for
-	elements that have the attribute `data-toggle="tooltip"`. This means that when an element with this
-	specific attribute is hovered over, a tooltip will be displayed with additional information or a
-	message related to that element. This is a common feature used in web development to provide users
-	with more context or details about certain elements on a webpage. */
-	$('[data-toggle="tooltip"]').tooltip();
-
-	/* The code `$("#enviarFormulario").click(function () { alert("El formulario fue enviado
-correctamente"); });` is setting up a click event listener on an element with the ID
-"enviarFormulario". When that element is clicked, it will trigger an alert message saying "El
-formulario fue enviado correctamente", which means "The form was submitted successfully" in Spanish. */
+	// FORMULARIO - Click Botón Enviar
 	$("#enviarFormulario").click(function () {
 		alert("El formulario fue enviado correctamente");
 	});
 
-
-
-
-	
-	$(document).ready(function () {
-		$(window).scroll(function () {
-			var navbar = $("#navbar");
-			if ($(window).scrollTop() > 0) {
-				// Si te has desplazado hacia abajo
-				navbar.css("background-color", "black"); // Cambia el fondo a negro
-			} else {
-				navbar.css("background-color", "transparent"); // De lo contrario, hazlo transparente
-			}
-		});
+	// FORMULARIO - Tooltips
+	var tooltipTriggerList = [].slice.call(
+		document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	);
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl);
 	});
+
+	// FOOTER - ICONOS - Crear los iconos con enlaces a rrss
+	for (let i = 0; i <= 5; i++) {
+		crearIconosFooter(i);
+	}
 });
