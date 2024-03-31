@@ -1,5 +1,6 @@
-/**
+/********************************************************************************
  * FUNCION CREAR CARDS
+ *
  * The function "crearTarjeta" generates a card element with dynamic image and text content and appends
  * it to a specified container on the webpage.
  * @param i - The parameter `i` in the `crearTarjeta` function is used to dynamically generate the
@@ -28,8 +29,9 @@ function crearCard(i) {
 	$("#tarjetas-destacados").append(new_card);
 }
 
-/**
+/***************************************************************************************
  *  FUNCION CREAR ICONOS RRSS
+ *
  * The function `crearIconosRRSS` creates social media icons with corresponding links and appends them
  * to a specified container in the footer.
  * @param i - The parameter `i` in the `crearIconosRRSS` function is used as an index to select the
@@ -67,11 +69,9 @@ function crearIconosFooter(i) {
 	$("#icons-box").append(element);
 }
 
-
-
-
-/**
- * FUNCION CREAR ARTICULO      *******************
+/****************************************************************************
+ * *************************  FUNCION CREAR ARTICULO      *******************
+ *
  * The function `crearArticle` dynamically creates articles with icons and text, alternating their
  * positions based on the index provided.
  * @param i - The `crearArticle` function you provided creates an article element with an icon and some
@@ -111,18 +111,19 @@ function crearArticle(i) {
 	$("#article-box").append(articulo);
 }
 
-
-
-//   **************** BLOQUE PRINCIPAL  ***********************
+// *************************************************************************************************
+//    ******************************** BLOQUE PRINCIPAL  ****************************************
 
 $(document).ready(function () {
+	
 
-
-	// NAVBAR - Cambia a fondo negro al desplazarse habia abajo
+	// HEADER - Función para cambiar color del menú al descender
 	$(window).scroll(function () {
 		var navbar = $("#navbar");
-		if ($(window).scrollTop() > 700) {
-			navbar.css("background-color", "rgba(0, 0, 0, 0.7)"); // Cambia el fondo a negro con 50% de opacidad
+		var container = $("#container"); // El color de menú cambiará al entrar al container.
+
+		if ($(window).scrollTop() >= container.offset().top) {
+			navbar.css("background-color", "rgba(0, 0, 0, 0.7)"); // Cambia el fondo a negro con 70% de opacidad
 			navbar.addClass("scrolled"); // Agrega la clase 'scrolled'
 		} else {
 			navbar.css("background-color", "transparent"); // De lo contrario, hazlo transparente
@@ -146,11 +147,9 @@ $(document).ready(function () {
 	});
 
 	// FORMULARIO - Tooltips
-	var tooltipTriggerList = [].slice.call(
-		document.querySelectorAll('[data-bs-toggle="tooltip"]')
-	);
-	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-		return new bootstrap.Tooltip(tooltipTriggerEl);
+	const tooltipTrigger = $('[data-bs-toggle="tooltip"]');
+	$.each(tooltipTrigger, function (index, tooltipTriggerEl) {
+		new bootstrap.Tooltip(tooltipTriggerEl);
 	});
 
 	// FOOTER - ICONOS - Crear los iconos con enlaces a rrss

@@ -3,9 +3,8 @@
 	margin: 0px;
 }
 
-body {
-	background-color: black;
-	color: white;
+html {
+	scroll-behavior: smooth;
 }
 
 body,
@@ -13,6 +12,7 @@ body,
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
 	font-style: normal;
+	font-size: 20px;
 }
 
 .bg-viajes {
@@ -20,13 +20,23 @@ body,
 }
 
 h2 {
-	margin-block: 50px;
+	margin-block: 60px;
 }
 
+/* ******************************************************************* */
+/* ******************** C A R R U S E L ****************************** */
+
+/* Definir altura máxima de las imágenes */
 .carousel-item img {
 	width: 100%;
 	height: auto;
-	max-height: 720px;
+	max-height: 740px;
+}
+
+/* ******************************************************************* */
+/* ********************* N A V B A R ********************************* */
+
+#container-navbar {
 }
 
 #logo img {
@@ -34,9 +44,8 @@ h2 {
 }
 
 .navbar-nav {
-	float: right; /* alinea a la derecha el menu desplegable */
-	position: absolute;
-	right: 10px;
+	/* position: absolute;
+	right: 20px; */
 	/* border: 1px solid red; */
 }
 
@@ -45,7 +54,7 @@ h2 {
 	z-index: 1000; /* Esto asegura que el menú esté por encima de otros elementos, como un carrusel */
 	transition: background-color 0.5s ease;
 	display: flex;
-	justify-content: end;
+	justify-content: space-evenly;
 }
 
 .navbar a {
@@ -59,46 +68,64 @@ h2 {
 }
 
 .navbar.scrolled a:hover {
-	background-color: rgba(0,234,255,0.943); /* Cambia el fondo a 'aqua' al pasar el cursor cuando se ha desplazado hacia abajo */
+	background-color: rgba(
+		0,
+		234,
+		255,
+		0.943
+	); /* Cambia el fondo a 'aqua' al pasar el cursor cuando se ha desplazado hacia abajo */
 	color: white; /* Mantiene el color del texto en blanco al pasar el cursor cuando se ha desplazado hacia abajo */
 }
 
-*************** li {
+li {
 	font-size: 20px;
 }
 
-i {
-	font-size: 30px;
-	padding-inline: 5px;
+/* ******************************************************************* */
+/* **************** S E C C I O N  -  D E S T A C A D O S ************ */
+
+/* Definimos el estilo inicial de la card */
+.card {
+	transition: transform 0.5s, background-color 0.5s; /* Animación */
+	opacity: 80%;
 }
 
+/* Definimos el estilo de la card cuando se pasa el cursor sobre ella */
+.card:hover {
+	transform: scale(1.05); /* Agrandamos la card */
+	opacity: 100%; /* Oscurecemos la card */
+}
+
+/* Centra la card dentro de la columna */
 .row div {
 	display: flex;
-
 	flex-direction: column;
 	align-items: center;
 }
 
+.card-body p {
+	font-size: 18px;
+}
+/* Fijar altura máxima para las card */
 .card img {
 	width: 100%;
 	height: auto;
 	max-height: 190px;
 }
 
-/* Definimos el estilo inicial de la card */
-.card {
-	transition: transform .5s, background-color .5s; /* Animación */
-	opacity: 80%;
-  }
-  
-  /* Definimos el estilo de la card cuando se pasa el cursor sobre ella */
-  .card:hover {
-	transform: scale(1.05); /* Agrandamos la card */
-	opacity: 100%; /* Oscurecemos la card */
-  }
-  
+/* ****************** FORMULARIO ********************* */
 
+/* Definimos el estilo inicial de la caja de texto y el textarea */
+input[type="text"],
+textarea {
+	transition: box-shadow 0.2s; /* Animación */
+}
 
+/* Definimos el estilo de la caja de texto y el textarea cuando se hace clic en ellos */
+input[type="text"]:focus,
+textarea:focus {
+	box-shadow: 0 0 20px rgba(72, 211, 213, 0.935); /* Agrega un resplandor */
+}
 
 /* Definimos el estilo inicial del botón */
 .btn {
@@ -118,11 +145,13 @@ i {
 /* Definimos el estilo del botón cuando se pasa el cursor sobre él */
 .btn:hover {
 	background-color: rgba(0, 234, 255, 1); /* Intensificamos el color */
-	color:black;
+	color: black;
 	transform: scale(1.1); /* Agrandamos el botón */
 	box-shadow: 0 0 10px rgba(0, 234, 255, 1); /* Agregamos un efecto de sombra para darle más énfasis */
 	opacity: 100%;
 }
+
+/* ********* F O O T E R *********** */
 
 footer {
 	height: 100px;
@@ -142,36 +171,50 @@ footer div a :hover {
 	color: black;
 }
 
-.tooltip.bs-tooltip-bottom .arrow::before,
-.tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-	border-bottom-color: rgba(
-		0,
-		234,
-		255,
-		0.943
-	); /* Color de la flecha del tooltip */
+i {
+	font-size: 30px;
+	padding-inline: 5px;
 }
 
-html {
-	scroll-behavior: smooth;
+.custom-tooltip {
+	--bs-tooltip-bg: rgba(0, 234, 255, 0.943);
+	--bs-tooltip-color: white;
 }
+
+/* 
+************ M E D I A -  Q U E R Y ****************/
 
 @media only screen and (max-width: 576px) {
+	ul :nth-child(2),
 	#quienes-somos-section {
 		display: none;
+		/* font-size: 16px;
+		background-color: black;
+		opacity: 60%; */
+	}
+
+	.container-navbar {
+		display: flex;
+		justify-content: center;
+	}
+
+	.navbar {
+		background-color: black;
+		opacity: 90%;
+	}
+
+	h1 {
+		font-size: 16px;
+	}
+
+	li {
+		font-size: 12px;
 	}
 
 	.card {
-		margin-bottom: 3%;
-	}
-
-	ul :nth-child(2) {
-		display: none;
-	}
-}
-
-@media only screen and (max-width: 992px) {
-	.navbar-nav {
-		margin-top: 20px;
+		transition: none;
+		transform: none;
+		opacity: 100%;
+		margin-bottom: 5%;
 	}
 }
