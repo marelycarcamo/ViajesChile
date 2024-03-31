@@ -51,3 +51,13 @@ Este proyecto es una excelente herramienta para nuevos programadores por varias 
 git clone https://tu-repositorio/viajes-chile.git
 cd viajes-chile
 // Abre index.html en tu navegador
+
+##Contribución
+
+Las contribuciones son bienvenidas y se anima especialmente a aquellos interesados en mejorar la calidad del código y la experiencia educativa.
+
+##Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE.md para detalles.
+
+## Viajes Chile © 2024. Proyecto educativo de código abierto.
