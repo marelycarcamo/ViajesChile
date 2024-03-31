@@ -1,5 +1,18 @@
 # Viajes Chile
 
+
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/617b748d-9387-478d-a526-75d83ddd4001)
+
+
+
+
+
+
+
+https://github.com/marelycarcamo/ViajesChile.git
+
+
 ## Descripción del Proyecto
 
 "Viajes Chile es un proyecto educativo que ayuda a programadores emergentes a aprender y mejorar sus habilidades de desarrollo web. El sitio web ofrece una experiencia de aprendizaje interactiva con código bien documentado, ejemplos prácticos y características útiles como una barra de menú dinámica, desplazamiento suave y tooltips informativos."
@@ -135,42 +148,7 @@ function crearArticle(i) {
 	$("#article-box").append(articulo);
 }
 ````
-````
-function crearArticle(i) {
-	let iconos = [
-		"fa-solid fa-plane",
-		"fa-solid fa-mountain",
-		"fa-solid fa-route",
-	];
 
-	let div_iconos = $(`<div div-icons class="w-100 bg-viajes text-center">
-						<i class="${iconos[i - 1]}"></i>
-					</div>`);
-
-	let p_texto = $(
-		`<p class="p-text px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias facilis impedit officiis molestiae repellendus, aliquid amet. Voluptate, veniam dolores. At delectus nostrum aliquam ex! Ipsum, alias sequi odit et eveniet incidunt veniam dignissimos excepturi quia ullam in nesciunt accusamus ipsam dicta reiciendis voluptatibus optio quae, maxime ad vel placeat? Illo, sed amet fuga nesciunt pariatur quis perferendis, commodi voluptate eum necessitatibus ipsam sit veritatis nisi ducimus modi, praesentium nam. Incidunt temporibus fugit esse, ratione deleniti quas doloribus molestias soluta.</p> `
-	);
-
-	var primero = div_iconos;
-	var segundo = p_texto;
-
-	if (i % 2 == 0) {
-		primero = p_texto;
-		segundo = div_iconos;
-	}
-
-	let articulo = $(`
-		<article class="col-4">
-		</article>`);
-
-	articulo.append(primero);
-	articulo.append(segundo);
-
-	$("#article-box").append(articulo);
-}
-
-
-````
 ````
 	// SECCION PRINCIPAL - Creación de artículos
 	for (let i = 1; i < 4; i++) {
