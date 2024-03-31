@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Viajes Chile es un proyecto educativo, cumple con la idea de reforzar técnicas de programación, también sirve como recurso educativo para programadores emergentes, demostrando técnicas avanzadas y código bien estructurado.
+"Viajes Chile es un proyecto educativo que ayuda a programadores emergentes a aprender y mejorar sus habilidades de desarrollo web. El sitio web ofrece una experiencia de aprendizaje interactiva con código bien documentado, ejemplos prácticos y características útiles como una barra de menú dinámica, desplazamiento suave y tooltips informativos."
 
 ## Calidad del Código
 
