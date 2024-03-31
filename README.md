@@ -15,6 +15,7 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 ## Características del Sitio
 
 - **Barra de Menú Dinámica**: Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
+- **Smooth Scrolling**: Un desplazamiento suave crea una experiencia más natural, fluida y mejora la accesabilidad. Además, puede dar un aspecto más pulido y profesional, lo que puede mejorar para percepción general del sitio.
 - **Tooltips Informativos**: Implementación de tooltips para proporcionar información adicional de manera elegante y eficiente.
 - **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código.
 
