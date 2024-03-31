@@ -60,7 +60,7 @@ Las contribuciones son bienvenidas y se anima especialmente a aquellos interesad
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE.md para detalles.
+Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para detalles.
 
 
 ## Viajes Chile © 2024. Proyecto educativo de código abierto.
