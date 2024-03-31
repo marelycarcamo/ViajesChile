@@ -58,8 +58,126 @@ function crearCard(i) {
 ### Función `crearIconosRRSS`
 `crearIconosRRSS` crea iconos de redes sociales con enlaces correspondientes y los añade a un contenedor en el pie de página. El parámetro `i` se utiliza como índice para seleccionar el icono y el enlace adecuados de los arrays proporcionados.
 
+````
+function crearIconosFooter(i) {
+	// Lista de íconos de redes sociales
+	let iconos = [
+		"fa-brands fa-linkedin",
+		"fa-brands fa-github",
+		"fa-brands fa-twitter",
+		"fa-brands fa-facebook",
+	];
+
+	// Lista de enlaces a las redes sociales
+	let enlaces = [
+		"https://www.linkedin.com",
+		"https://www.github.com",
+		"https://www.twitter.com",
+		"https://www.facebook.com",
+	];
+
+	// Creando el icono con sus respectivos enlaces.
+
+	let element = `<a	
+		class="text-white"
+		href="${enlaces[i]}"
+		target="_blank"
+		rel="noopener noreferrer"
+		><i class="${iconos[i]}"></i
+	></a>`;
+
+	// Agregando el icono a la caja de iconos del footer.
+	$("#icons-box").append(element);
+}
+
+````
+````
+// SECCION PRINCIPAL - Crear los iconos con enlaces a rrss
+	for (let i = 0; i <= 5; i++) {
+		crearIconosFooter(i);
+	}
+````
+
 ### Función `crearArticle`
 La función `crearArticle` crea artículos dinámicamente con iconos y texto, alternando sus posiciones basándose en el índice proporcionado. El parámetro `i` determina qué icono mostrar en el artículo.
+````
+
+function crearArticle(i) {
+	let iconos = [
+		"fa-solid fa-plane",
+		"fa-solid fa-mountain",
+		"fa-solid fa-route",
+	];
+
+	let div_iconos = $(`<div div-icons class="w-100 bg-viajes text-center">
+						<i class="${iconos[i - 1]}"></i>
+					</div>`);
+
+	let p_texto = $(
+		`<p class="p-text px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias facilis impedit officiis molestiae repellendus, aliquid amet. Voluptate, veniam dolores. At delectus nostrum aliquam ex! Ipsum, alias sequi odit et eveniet incidunt veniam dignissimos excepturi quia ullam in nesciunt accusamus ipsam dicta reiciendis voluptatibus optio quae, maxime ad vel placeat? Illo, sed amet fuga nesciunt pariatur quis perferendis, commodi voluptate eum necessitatibus ipsam sit veritatis nisi ducimus modi, praesentium nam. Incidunt temporibus fugit esse, ratione deleniti quas doloribus molestias soluta.</p> `
+	);
+
+	var primero = div_iconos;
+	var segundo = p_texto;
+
+	if (i % 2 == 0) {
+		primero = p_texto;
+		segundo = div_iconos;
+	}
+
+	let articulo = $(`
+		<article class="col-4">
+		</article>`);
+
+	articulo.append(primero);
+	articulo.append(segundo);
+
+	$("#article-box").append(articulo);
+}
+````
+````
+function crearArticle(i) {
+	let iconos = [
+		"fa-solid fa-plane",
+		"fa-solid fa-mountain",
+		"fa-solid fa-route",
+	];
+
+	let div_iconos = $(`<div div-icons class="w-100 bg-viajes text-center">
+						<i class="${iconos[i - 1]}"></i>
+					</div>`);
+
+	let p_texto = $(
+		`<p class="p-text px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias facilis impedit officiis molestiae repellendus, aliquid amet. Voluptate, veniam dolores. At delectus nostrum aliquam ex! Ipsum, alias sequi odit et eveniet incidunt veniam dignissimos excepturi quia ullam in nesciunt accusamus ipsam dicta reiciendis voluptatibus optio quae, maxime ad vel placeat? Illo, sed amet fuga nesciunt pariatur quis perferendis, commodi voluptate eum necessitatibus ipsam sit veritatis nisi ducimus modi, praesentium nam. Incidunt temporibus fugit esse, ratione deleniti quas doloribus molestias soluta.</p> `
+	);
+
+	var primero = div_iconos;
+	var segundo = p_texto;
+
+	if (i % 2 == 0) {
+		primero = p_texto;
+		segundo = div_iconos;
+	}
+
+	let articulo = $(`
+		<article class="col-4">
+		</article>`);
+
+	articulo.append(primero);
+	articulo.append(segundo);
+
+	$("#article-box").append(articulo);
+}
+
+
+````
+````
+	// SECCION PRINCIPAL - Creación de artículos
+	for (let i = 1; i < 4; i++) {
+		crearArticle(i);
+	}
+````
+
 
 ## Utilidad Educativa
 
