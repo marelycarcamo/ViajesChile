@@ -36,40 +36,14 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 ### Función `crearTarjeta`
 Función crearTarjeta: Esta función genera tarjetas con contenido de imagen y texto dinámicos, que se añaden a un contenedor específico en la página web.
-````
-function crearCard(i) {
-	let urlBase = "assets/img/card";
-
-	let img = urlBase + i + ".jpg";
-
-	let new_card = `<div class="col-sm-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
-						<div class="card shadow mb-md-5 mb-sm-5" style="width: 18rem">
-							<img src="${img}" class="card-img-top" alt="" />
-							<div class="card-body bg-viajes text-white">
-								<h5>LOREM IPSUM</h5>
-								<p class="card-text">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-									Velit vero hic alias, voluptates eligendi repellat quo
-									provident animi doloribus nobis!
-								</p>
-							</div>
-						</div>
-					</div>`;
-
-	$("#tarjetas-destacados").append(new_card);
-
-````
-
-````
-  
-  	// SECCION PRINCIPAL - Creación de tarjetas
-	for (let i = 1; i <= 4; i++) {
-		crearCard(i);
-	}
-````
 
 ### Función `crearIconosRRSS`
 `crearIconosRRSS` crea iconos de redes sociales con enlaces correspondientes y los añade a un contenedor en el pie de página. El parámetro `i` se utiliza como índice para seleccionar el icono y el enlace adecuados de los arrays proporcionados.
+1. **Reutilización de código:** Solo necesitas llamar a la función con el índice correspondiente al icono y al enlace que deseas crear.
+2. **Separación de datos y lógica:** Esto hace que el código sea más fácil de leer y mantener. Si necesitas agregar una nueva red social, solo tienes que agregarla a las listas iconos y enlaces.
+3. **Seguridad:** Usar rel="noopener noreferrer" en un enlace es como cerrar una puerta detrás de ti al salir. Ayuda a mantener tu navegación segura.
+4. Accesibilidad: Al usar target="_blank", los enlaces se abrirán en una nueva pestaña o ventana. Esto permite a los usuarios volver a tu página fácilmente.
+
 
 ````
 function crearIconosFooter(i) {
@@ -113,48 +87,6 @@ function crearIconosFooter(i) {
 
 ### Función `crearArticle`
 La función `crearArticle` crea artículos dinámicamente con iconos y texto, alternando sus posiciones basándose en el índice proporcionado. El parámetro `i` determina qué icono mostrar en el artículo.
-````
-
-function crearArticle(i) {
-	let iconos = [
-		"fa-solid fa-plane",
-		"fa-solid fa-mountain",
-		"fa-solid fa-route",
-	];
-
-	let div_iconos = $(`<div div-icons class="w-100 bg-viajes text-center">
-						<i class="${iconos[i - 1]}"></i>
-					</div>`);
-
-	let p_texto = $(
-		`<p class="p-text px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestias facilis impedit officiis molestiae repellendus, aliquid amet. Voluptate, veniam dolores. At delectus nostrum aliquam ex! Ipsum, alias sequi odit et eveniet incidunt veniam dignissimos excepturi quia ullam in nesciunt accusamus ipsam dicta reiciendis voluptatibus optio quae, maxime ad vel placeat? Illo, sed amet fuga nesciunt pariatur quis perferendis, commodi voluptate eum necessitatibus ipsam sit veritatis nisi ducimus modi, praesentium nam. Incidunt temporibus fugit esse, ratione deleniti quas doloribus molestias soluta.</p> `
-	);
-
-	var primero = div_iconos;
-	var segundo = p_texto;
-
-	if (i % 2 == 0) {
-		primero = p_texto;
-		segundo = div_iconos;
-	}
-
-	let articulo = $(`
-		<article class="col-4">
-		</article>`);
-
-	articulo.append(primero);
-	articulo.append(segundo);
-
-	$("#article-box").append(articulo);
-}
-````
-
-````
-	// SECCION PRINCIPAL - Creación de artículos
-	for (let i = 1; i < 4; i++) {
-		crearArticle(i);
-	}
-````
 
 
 ## Utilidad Educativa
