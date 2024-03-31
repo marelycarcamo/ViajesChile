@@ -15,14 +15,45 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 ## Características del Sitio
 
 - **Barra de Menú Dinámica**: Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
-- **Smooth Scrolling**: Un desplazamiento suave crea una experiencia más natural, fluida y mejora la accesabilidad. Además, puede dar un aspecto más pulido y profesional, lo que puede mejorar para percepción general del sitio.
-- **Tooltips Informativos**: Implementación de tooltips para proporcionar información adicional de manera elegante y eficiente.
+- **Smooth Scrolling**: Crea una experiencia más natural y fluida al navegar por el sitio.
+- **Tooltips Informativos**: Proporcionan información adicional de manera elegante y eficiente.
 - **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código.
 
 ## Funciones JavaScript Destacadas
 
 ### Función `crearTarjeta`
-Esta función genera tarjetas con contenido de imagen y texto dinámicos, que se añaden a un contenedor específico en la página web. Utiliza el parámetro `i` para generar URLs de imágenes de forma dinámica y crear tarjetas únicas.
+Función crearTarjeta: Esta función genera tarjetas con contenido de imagen y texto dinámicos, que se añaden a un contenedor específico en la página web.
+````
+function crearCard(i) {
+	let urlBase = "assets/img/card";
+
+	let img = urlBase + i + ".jpg";
+
+	let new_card = `<div class="col-sm-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
+						<div class="card shadow mb-md-5 mb-sm-5" style="width: 18rem">
+							<img src="${img}" class="card-img-top" alt="" />
+							<div class="card-body bg-viajes text-white">
+								<h5>LOREM IPSUM</h5>
+								<p class="card-text">
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+									Velit vero hic alias, voluptates eligendi repellat quo
+									provident animi doloribus nobis!
+								</p>
+							</div>
+						</div>
+					</div>`;
+
+	$("#tarjetas-destacados").append(new_card);
+
+````
+
+````
+  
+  	// SECCION PRINCIPAL - Creación de tarjetas
+	for (let i = 1; i <= 4; i++) {
+		crearCard(i);
+	}
+````
 
 ### Función `crearIconosRRSS`
 `crearIconosRRSS` crea iconos de redes sociales con enlaces correspondientes y los añade a un contenedor en el pie de página. El parámetro `i` se utiliza como índice para seleccionar el icono y el enlace adecuados de los arrays proporcionados.
@@ -48,16 +79,14 @@ Este proyecto es una excelente herramienta para nuevos programadores por varias 
 
 ## Instalación y Uso
 
-````bash
-git clone https://tu-repositorio/viajes-chile.git
-cd viajes-chile
-// Abre index.html en tu navegador
-````
+1. Clona el repositorio: ``git clone https://github.com/marelycarcamo/ViajesChile.git``. <br>
+2. Accede a la carpeta del proyecto: ``cd viajeschile``. <br>
+3. Abre el archivo ``index.html`` en tu navegador.
 
 ## Contribución
 
-Las contribuciones son bienvenidas y se anima especialmente a aquellos interesados en mejorar la calidad del código y la experiencia educativa.
-
+¿Te gustaría contribuir a mi proyecto Viajes Chile? <br>
+¡Eres bienvenido! Puedes reportar errores, enviar nuevas funcionalidades o mejorar la documentación.
 
 ## Licencia
 
