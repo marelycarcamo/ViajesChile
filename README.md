@@ -7,11 +7,17 @@
 
 https://github.com/marelycarcamo/ViajesChile.git
 
+## CONTENIDO
+
 - [Viajes Chile](#Viajes-Chile)
   - [Descripción del Proyecto](#Descripción-del-Proyecto)
   - [Calidad del Código](#Calidad-del-Código)
   - [Proceso de Desarrollo](#Proceso-de-Desarrollo)
   - [Características del Sitio](#Características-del-Sitio)
+    - [**Barra de Menú Dinámica** <br>](#Barra-de-Menú-Dinámica-br)
+    - [**Smooth Scrolling**<br>](#Smooth-Scrollingbr)
+    - [**Tooltips Informativos**](#Tooltips-Informativos)
+    - [**Contenido Dinámico** <br>](#Contenido-Dinámico-br)
   - [Funciones JavaScript Destacadas](#Funciones-JavaScript-Destacadas)
     - [`crearCard(i)`](#crearCardi)
     - [`crearArticle(i)`](#crearArticlei)
@@ -39,7 +45,7 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 ## Características del Sitio
 
-- ### **Barra de Menú Dinámica** <br>
+### **Barra de Menú Dinámica** <br>
 Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
 
 Beneficios:
@@ -106,7 +112,7 @@ Ver imagen-menu-2
 }
 ````
 
-- ### **Smooth Scrolling**<br>
+### **Smooth Scrolling**<br>
 Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
 
 En el HTML: <br>
@@ -126,10 +132,10 @@ html {
 	scroll-behavior: smooth;
 }
 ````
-
-
 <br>
-- ### **Tooltips Informativos**
+
+
+### **Tooltips Informativos**
 Los Tooltips Informativos son pequeñas ventanas emergentes que aparecen al pasar el cursor sobre un elemento específico. Estos brindan información adicional de manera elegante y sin estorbar la visual general de la página.
 <br>
 
@@ -196,7 +202,7 @@ Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y J
 
 <br>
   
-- ### **Contenido Dinámico** <br>
+### **Contenido Dinámico** <br>
   Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
   ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/9b20cb10-dfcb-49e7-9448-6b5d772e9e79)
 <br>
