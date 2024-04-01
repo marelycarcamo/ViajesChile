@@ -28,7 +28,28 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 ## Características del Sitio
 
 - **Barra de Menú Dinámica**: Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
-- **Smooth Scrolling**: Crea una experiencia más natural y fluida al navegar por el sitio.
+- **Smooth Scrolling**: Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
+
+En el HTML: <br>
+1. Asignamos un id a la sección formulario: ``<section id="form-section">``
+2. En la barra de menú, se agrega un enlace a la sección Formulario  **href='#form-section'**
+````
+<li class="nav-item">
+	<a class="nav-link text-white" href="#form-section">Contacto</a>
+</li>
+````
+En el CSS: <br>
+   Se activa el comportamiento de "scroll suave" para toda la página:
+
+````
+/* CSS - SMOOTH SCROOL */
+html {
+	scroll-behavior: smooth;
+}
+````
+
+
+  
 - **Tooltips Informativos**: Proporcionan información adicional de manera elegante y eficiente.
 - **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código.
 
