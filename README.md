@@ -15,9 +15,9 @@ https://github.com/marelycarcamo/ViajesChile.git
   - [Proceso de Desarrollo](#Proceso-de-Desarrollo)
   - [Características del Sitio](#Características-del-Sitio)
     - [**Barra de Menú Dinámica**](#Barra-de-Menú-Dinámica)
-    - [**Smooth Scrolling**](#Smooth-Scrolling-br)
+    - [**Smooth Scrolling**](#Smooth-Scrolling)
     - [**Tooltips Informativos**](#Tooltips-Informativos)
-    - [**Contenido Dinámico** <br>](#Contenido-Dinámico-br)
+    - [**Contenido Dinámico**](#Contenido-Dinámico)
   - [Funciones JavaScript Destacadas](#Funciones-JavaScript-Destacadas)
     - [`crearCard(i)`](#crearCardi)
     - [`crearArticle(i)`](#crearArticlei)
@@ -113,7 +113,8 @@ Ver imagen-menu-2
 }
 ````
 
-### **Smooth Scrolling**<br>
+### **Smooth Scrolling**
+<br>
 Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
 
 En el HTML: <br>
@@ -203,7 +204,8 @@ Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y J
 
 <br>
   
-### **Contenido Dinámico** <br>
+### **Contenido Dinámico**
+<br>
   Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
   ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/9b20cb10-dfcb-49e7-9448-6b5d772e9e79)
 <br>
