@@ -1,5 +1,4 @@
-# Viajes Chile
-
+# Viajes Chile 
 
 
 ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/617b748d-9387-478d-a526-75d83ddd4001)
@@ -7,6 +6,29 @@
 
 
 https://github.com/marelycarcamo/ViajesChile.git
+
+## CONTENIDO
+
+- [Viajes Chile](#Viajes-Chile)
+  - [Descripción del Proyecto](#Descripción-del-Proyecto)
+  - [Calidad del Código](#Calidad-del-Código)
+  - [Proceso de Desarrollo](#Proceso-de-Desarrollo)
+  - [Características del Sitio](#Características-del-Sitio)
+    - [**Barra de Menú Dinámica** <br>](#Barra-de-Menú-Dinámica-br)
+    - [**Smooth Scrolling**<br>](#Smooth-Scrollingbr)
+    - [**Tooltips Informativos**](#Tooltips-Informativos)
+    - [**Contenido Dinámico** <br>](#Contenido-Dinámico-br)
+  - [Funciones JavaScript Destacadas](#Funciones-JavaScript-Destacadas)
+    - [`crearCard(i)`](#crearCardi)
+    - [`crearArticle(i)`](#crearArticlei)
+    - [Función `crearIconosFooter(i)`](#Función-crearIconosFooteri)
+    - [Propósito de las Funciones en la Programación](#Propósito-de-las-Funciones-en-la-Programación)
+  - [Utilidad Educativa](#Utilidad-Educativa)
+  - [Tecnologías Utilizadas](#Tecnologías-Utilizadas)
+  - [Instalación y Uso](#Instalación-y-Uso)
+  - [Contribución](#Contribución)
+  - [Licencia](#Licencia)
+  - [Viajes Chile © 2024. Proyecto educativo de código abierto.](#Viajes-Chile-©-2024-Proyecto-educativo-de-código-abierto)
 
 
 ## Descripción del Proyecto
@@ -23,7 +45,7 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 ## Características del Sitio
 
-- ### **Barra de Menú Dinámica** <br>
+### **Barra de Menú Dinámica** <br>
 Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
 
 Beneficios:
@@ -90,7 +112,7 @@ Ver imagen-menu-2
 }
 ````
 
-- ### **Smooth Scrolling**<br>
+### **Smooth Scrolling**<br>
 Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
 
 En el HTML: <br>
@@ -110,10 +132,10 @@ html {
 	scroll-behavior: smooth;
 }
 ````
-
-
 <br>
-- ### **Tooltips Informativos**
+
+
+### **Tooltips Informativos**
 Los Tooltips Informativos son pequeñas ventanas emergentes que aparecen al pasar el cursor sobre un elemento específico. Estos brindan información adicional de manera elegante y sin estorbar la visual general de la página.
 <br>
 
@@ -180,7 +202,7 @@ Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y J
 
 <br>
   
-- ### **Contenido Dinámico** <br>
+### **Contenido Dinámico** <br>
   Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
   ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/9b20cb10-dfcb-49e7-9448-6b5d772e9e79)
 <br>
@@ -246,7 +268,6 @@ function crearIconosFooter(i) {
 
 
 
-
 ### Propósito de las Funciones en la Programación
 
 - **Modularidad**: Cada función realiza una tarea específica y bien definida. Esto hace que el código sea más fácil de entender y mantener. Por ejemplo, `crearCard` se enfoca exclusivamente en la creación de tarjetas, lo que permite que otros desarrolladores comprendan rápidamente su propósito.
@@ -288,11 +309,13 @@ Este proyecto es una excelente herramienta para nuevos programadores por varias 
 ¿Te gustaría contribuir a mi proyecto Viajes Chile? <br>
 ¡Eres bienvenido! Puedes reportar errores, enviar nuevas funcionalidades o mejorar la documentación.
 
-## Licencia
+## Licencia 
 
 Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para detalles.
 
 
 ## Viajes Chile © 2024. Proyecto educativo de código abierto.
+<a id="Viajes-Chile-©-2024-Proyecto-educativo-de-código-abierto"> </a>
+
 
 
