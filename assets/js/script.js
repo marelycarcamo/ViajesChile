@@ -12,9 +12,9 @@ function crearCard(i) {
 
 	let img = urlBase + i + ".jpg";
 
-	let new_card = `<div class="col-sm-12 col-md-6 col-xl-3">
+	let new_card = `<div class="col-sm-12 col-md-6 col-xl-3 d-flex flex-column align-items-center">
 						<div class="card shadow mb-md-5 mb-sm-5" style="width: 18rem">
-							<img src="${img}" class="card-img-top" alt="..." />
+							<img src="${img}" class="card-img-top" alt=" " />
 							<div class="card-body bg-viajes text-white">
 								<h5>LOREM IPSUM</h5>
 								<p class="card-text">
@@ -115,21 +115,26 @@ function crearArticle(i) {
 //    ******************************** BLOQUE PRINCIPAL  ****************************************
 
 $(document).ready(function () {
-	
-
 	// HEADER - Función para cambiar color del menú al descender
-	$(window).scroll(function () {
-		var navbar = $("#navbar");
-		var container = $("#container"); // El color de menú cambiará al entrar al container.
 
-		if ($(window).scrollTop() >= container.offset().top) {
-			navbar.css("background-color", "rgba(0, 0, 0, 0.7)"); // Cambia el fondo a negro con 70% de opacidad
-			navbar.addClass("scrolled"); // Agrega la clase 'scrolled'
+	// Almacena el elemento HTML de la barra de menú
+	const $navbar = $(".navbar");
+
+	// Función para cambiar el color del menú al desplazarse
+	$(window).scroll(function () {
+		const scroll = $(window).scrollTop();
+
+		if (scroll > 0) {
+			// Cambia el color de fondo y agrega la clase 'scrolled'
+			$navbar.css("background-color", "rgba(0, 0, 0, 0.7)");
+			$navbar.addClass("scrolled");
 		} else {
-			navbar.css("background-color", "transparent"); // De lo contrario, hazlo transparente
-			navbar.removeClass("scrolled"); // Elimina la clase 'scrolled'
+			// Restablece el color de fondo y elimina la clase 'scrolled'
+			$navbar.css("background-color", "transparent");
+			$navbar.removeClass("scrolled");
 		}
 	});
+
 
 	// SECCION QUIENES SOMOS - Creación de artículos
 	for (let i = 1; i < 4; i++) {
