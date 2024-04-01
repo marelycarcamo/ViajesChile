@@ -1,5 +1,4 @@
-# Viajes Chile
-
+# Viajes Chile 
 
 
 ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/617b748d-9387-478d-a526-75d83ddd4001)
@@ -7,6 +6,23 @@
 
 
 https://github.com/marelycarcamo/ViajesChile.git
+
+- [Viajes Chile](#Viajes-Chile)
+  - [Descripción del Proyecto](#Descripción-del-Proyecto)
+  - [Calidad del Código](#Calidad-del-Código)
+  - [Proceso de Desarrollo](#Proceso-de-Desarrollo)
+  - [Características del Sitio](#Características-del-Sitio)
+  - [Funciones JavaScript Destacadas](#Funciones-JavaScript-Destacadas)
+    - [`crearCard(i)`](#crearCardi)
+    - [`crearArticle(i)`](#crearArticlei)
+    - [Función `crearIconosFooter(i)`](#Función-crearIconosFooteri)
+    - [Propósito de las Funciones en la Programación](#Propósito-de-las-Funciones-en-la-Programación)
+  - [Utilidad Educativa](#Utilidad-Educativa)
+  - [Tecnologías Utilizadas](#Tecnologías-Utilizadas)
+  - [Instalación y Uso](#Instalación-y-Uso)
+  - [Contribución](#Contribución)
+  - [Licencia](#Licencia)
+  - [Viajes Chile © 2024. Proyecto educativo de código abierto.](#Viajes-Chile-©-2024-Proyecto-educativo-de-código-abierto)
 
 
 ## Descripción del Proyecto
@@ -246,7 +262,6 @@ function crearIconosFooter(i) {
 
 
 
-
 ### Propósito de las Funciones en la Programación
 
 - **Modularidad**: Cada función realiza una tarea específica y bien definida. Esto hace que el código sea más fácil de entender y mantener. Por ejemplo, `crearCard` se enfoca exclusivamente en la creación de tarjetas, lo que permite que otros desarrolladores comprendan rápidamente su propósito.
@@ -288,11 +303,13 @@ Este proyecto es una excelente herramienta para nuevos programadores por varias 
 ¿Te gustaría contribuir a mi proyecto Viajes Chile? <br>
 ¡Eres bienvenido! Puedes reportar errores, enviar nuevas funcionalidades o mejorar la documentación.
 
-## Licencia
+## Licencia 
 
 Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para detalles.
 
 
 ## Viajes Chile © 2024. Proyecto educativo de código abierto.
+<a id="Viajes-Chile-©-2024-Proyecto-educativo-de-código-abierto"> </a>
+
 
 
