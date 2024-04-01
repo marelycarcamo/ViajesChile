@@ -23,27 +23,61 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 ## Características del Sitio
 
-### **Barra de Menú Dinámica** <br>
+- ### **Barra de Menú Dinámica** <br>
 Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
 
-  ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/b32a5e06-92db-4faa-8389-eb174c8e6142)
-  ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/278346f6-192a-41e6-a14f-bcb9f74ecf87)
+Beneficios:
+Mejora la experiencia de usuario al navegar por el sitio web.
+Permite un acceso rápido a las diferentes secciones del sitio.
+Aporta un toque de dinamismo y modernidad al diseño.
+
+  ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/dabbdf95-6a52-4f4d-9c76-3bd0b9c61c29)
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/cddcf1da-bd1c-4438-a585-5ce825247354)
+
 
   ````
-  // HEADER - Función para cambiar color del menú al descender
+
+// Función para cambiar color del menú al descender
 	$(window).scroll(function () {
 		var navbar = $("#navbar");
 		var scroll = $(window).scrollTop();
 		if (scroll > 0) {
 			// Cambia el color cuando se comienza a desplazar hacia abajo
 			navbar.css("background-color", "rgba(0, 0, 0, 0.7)"); // Cambia el fondo a negro con 70% de opacidad
+			navbar.addClass("scrolled"); // Agrega la clase 'scrolled'
 		} else {
 			navbar.css("background-color", "transparent"); // De lo contrario, hazlo transparente
+			navbar.removeClass("scrolled"); // Elimina la clase 'scrolled'
 		}
 	});
   ````
 
-### **Smooth Scrolling**<br>
+En el CSS:
+Atención a la clase 'scrolled' esta asocia el cambio de color del :hover con el desplazamiento del menú.
+````
+
+.navbar a {
+	color: white; /* Color del texto del menú */
+	transition: background-color 0.5s ease; /* Transición suave */
+}
+
+.navbar a:hover {
+	background-color: black; /* Cambia el fondo a negro al pasar el cursor */
+	color: white; /* Cambia el color del texto a blanco al pasar el cursor */
+}
+
+.navbar.scrolled a:hover {
+	background-color: rgba(0,234,255,0.943); /* Cambia el fondo al pasar el cursor cuando se ha desplazado hacia abajo */
+	color: white; /* Mantiene el color del texto en blanco al pasar el cursor cuando se ha desplazado hacia abajo */
+}
+
+````
+
+
+
+
+- ### **Smooth Scrolling**<br>
 Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
 
 En el HTML: <br>
@@ -66,7 +100,7 @@ html {
 
 
 
-### **Tooltips Informativos**
+- ### **Tooltips Informativos**
 Los Tooltips Informativos son pequeñas ventanas emergentes que aparecen al pasar el cursor sobre un elemento específico. Estos brindan información adicional de manera elegante y sin estorbar la visual general de la página.
 
 ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/5d2fd3bf-91c1-4bf4-85fc-578d623ed229)
@@ -125,7 +159,8 @@ Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y J
 
 <br>
   
-### **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
+- ### **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
+
 
 ## Funciones JavaScript Destacadas
 
