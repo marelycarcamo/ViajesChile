@@ -1,8 +1,17 @@
 # Viajes Chile
 
+
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/617b748d-9387-478d-a526-75d83ddd4001)
+
+
+
+https://github.com/marelycarcamo/ViajesChile.git
+
+
 ## Descripción del Proyecto
 
-Viajes Chile es un proyecto educativo, cumple con la idea de reforzar técnicas de programación, también sirve como recurso educativo para programadores emergentes, demostrando técnicas avanzadas y código bien estructurado.
+"Viajes Chile es un proyecto educativo que ayuda a programadores emergentes a aprender y mejorar sus habilidades de desarrollo web. El sitio web ofrece una experiencia de aprendizaje interactiva con código bien documentado, ejemplos prácticos y características útiles como una barra de menú dinámica, desplazamiento suave y tooltips informativos."
 
 ## Calidad del Código
 
@@ -14,20 +23,243 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 ## Características del Sitio
 
-- **Barra de Menú Dinámica**: Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
-- **Tooltips Informativos**: Implementación de tooltips para proporcionar información adicional de manera elegante y eficiente.
-- **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código.
+- ### **Barra de Menú Dinámica** <br>
+Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
+
+Beneficios:
+Mejora la experiencia de usuario al navegar por el sitio web.
+Permite un acceso rápido a las diferentes secciones del sitio.
+Aporta un toque de dinamismo y modernidad al diseño.
+
+imagen-menu-1
+
+  ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/dabbdf95-6a52-4f4d-9c76-3bd0b9c61c29)
+
+imagen-menu-2
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/cddcf1da-bd1c-4438-a585-5ce825247354)
+
+
+  ````
+
+// Función para cambiar color del menú al descender
+
+	// Almacena el elemento HTML de la barra de menú
+	const $navbar = $(".navbar");
+
+	// Función para cambiar el color del menú al desplazarse
+	$(window).scroll(function () {
+		const scroll = $(window).scrollTop();
+
+		if (scroll > 0) {
+			// Cambia el color de fondo y agrega la clase 'scrolled'
+			$navbar.css("background-color", "rgba(0, 0, 0, 0.7)");
+			$navbar.addClass("scrolled");
+		} else {
+			// Restablece el color de fondo y elimina la clase 'scrolled'
+			$navbar.css("background-color", "transparent");
+			$navbar.removeClass("scrolled");
+		}
+	});
+
+  ````
+
+En el CSS:
+Atención a la clase 'scrolled' esta asocia el cambio de color del :hover con el desplazamiento del menú.
+````
+
+.navbar a {
+	color: white; /* Color del texto del menú */
+	transition: background-color 0.5s ease; /* Transición suave */
+}
+````
+
+Ver imagen-menu-1
+````
+
+.navbar a:hover {
+	background-color: black; /* Cambia el fondo a negro al pasar el cursor */
+	color: white; /* Cambia el color del texto a blanco al pasar el cursor */
+}
+````
+Ver imagen-menu-2
+````
+.navbar.scrolled a:hover {
+	background-color: rgba(0,234,255,0.943); /* Cambia el fondo al pasar el cursor cuando se ha desplazado hacia abajo */
+	color: white; /* Mantiene el color del texto en blanco al pasar el cursor cuando se ha desplazado hacia abajo */
+}
+````
+
+- ### **Smooth Scrolling**<br>
+Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
+
+En el HTML: <br>
+1. Asignamos un id a la sección formulario: ``<section id="form-section">``
+2. En la barra de menú, se agrega un enlace a la sección Formulario ``href='#form-section'``
+````
+<li class="nav-item">
+	<a class="nav-link text-white" href="#form-section">Contacto</a>
+</li>
+````
+En el CSS: <br>
+   Se activa el comportamiento de "scroll suave" para toda la página:<br>
+
+````
+/* CSS - SMOOTH SCROOL */
+html {
+	scroll-behavior: smooth;
+}
+````
+
+
+<br>
+- ### **Tooltips Informativos**
+Los Tooltips Informativos son pequeñas ventanas emergentes que aparecen al pasar el cursor sobre un elemento específico. Estos brindan información adicional de manera elegante y sin estorbar la visual general de la página.
+<br>
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/83924095-2633-4895-b92e-877e2f904cf4)
+
+<br>
+
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/f7dbfc54-3d20-4823-8b47-08adb5c76a42)
+
+
+
+
+Implementación Técnica
+
+En HTML:
+
+Se agrega la clase form-control al elemento textarea para darle estilo básico.<br>
+Se utilizan atributos de data personalizados de Bootstrap para configurar el tooltip: <br>
+	- `data-bs-custom-class="custom-tooltip"`: Define una clase CSS personalizada para aplicar estilos específicos al tooltip. <br>
+	- `data-bs-toggle="tooltip"`: Habilita la funcionalidad del tooltip. <br>
+	- `data-bs-placement="bottom"`: Indica la posición del tooltip (en este caso, debajo del elemento). <br>
+	- `title="Consulte por nuestras promociones y descuentos"`: Define el texto que se mostrará en el tooltip.<br>
+
+````
+<textarea class="form-control"
+		 data-bs-custom-class="custom-tooltip"
+		 data-bs-toggle="tooltip"
+		 data-bs-placement="bottom"
+		title="Consulte por nuestras promociones y descuentos"
+		></textarea>
+````
+
+En CSS:
+
+Se crea una clase CSS custom-tooltip para personalizar la apariencia del tooltip.
+Se utilizan variables de Bootstrap para definir el color de fondo (--bs-tooltip-bg) y el color del texto (--bs-tooltip-color) del tooltip.
+
+````
+/* aplica colores a tootip del formulario  */
+.custom-tooltip {
+	--bs-tooltip-bg: rgba(0, 234, 255, 0.943);
+	--bs-tooltip-color: white;
+}
+````
+
+En Javascript:
+
+Se utiliza librería de Javascript de Bootstrap para inicializar los tooltips.
+Se seleccionan todos los elementos que tengan el atributo data-bs-toggle="tooltip" utilizando jQuery.
+Se recorre cada elemento y se inicializa un nuevo objeto Bootstrap Tooltip para cada uno. <br>
+
+````
+	// Tooltips
+	const tooltipTrigger = $('[data-bs-toggle="tooltip"]');
+	$.each(tooltipTrigger, function (index, tooltipTriggerEl) {
+		new bootstrap.Tooltip(tooltipTriggerEl);
+	});
+````
+<br>
+Nota:
+
+Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y Javascript) en tu proyecto.
+
+<br>
+  
+- ### **Contenido Dinámico** <br>
+  Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
+  ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/9b20cb10-dfcb-49e7-9448-6b5d772e9e79)
+<br>
 
 ## Funciones JavaScript Destacadas
 
-### Función `crearTarjeta`
-Esta función genera tarjetas con contenido de imagen y texto dinámicos, que se añaden a un contenedor específico en la página web. Utiliza el parámetro `i` para generar URLs de imágenes de forma dinámica y crear tarjetas únicas.
 
-### Función `crearIconosRRSS`
-`crearIconosRRSS` crea iconos de redes sociales con enlaces correspondientes y los añade a un contenedor en el pie de página. El parámetro `i` se utiliza como índice para seleccionar el icono y el enlace adecuados de los arrays proporcionados.
+### `crearCard(i)`
+Esta función genera una nueva tarjeta con una imagen y texto predeterminado. Utiliza una base URL para las imágenes y las numera secuencialmente. La tarjeta se compone de una imagen y un cuerpo con un título y un texto de relleno. Finalmente, se añade al contenedor `#tarjetas-destacados`.
 
-### Función `crearArticle`
-La función `crearArticle` crea artículos dinámicamente con iconos y texto, alternando sus posiciones basándose en el índice proporcionado. El parámetro `i` determina qué icono mostrar en el artículo.
+### `crearArticle(i)`
+`crearArticle` crea un nuevo artículo que incluye un ícono y un párrafo de texto. Los íconos y el texto se alternan en posición dependiendo de si el índice `i` es par o impar. El artículo completo se agrega al contenedor `#article-box`.
+
+### Función `crearIconosFooter(i)`
+La función `crearIconosFooter` se encarga de agregar íconos de redes sociales al pie de página. Cada ícono está vinculado a su respectiva red social y se inserta dentro del contenedor `#icons-box`.
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/79e762d2-417b-4589-b7f9-87c75c2390ae) <br>
+
+
+
+
+
+
+````
+function crearIconosFooter(i) {
+	// Lista de íconos de redes sociales
+	let iconos = [
+		"fa-brands fa-linkedin",
+		"fa-brands fa-github",
+		"fa-brands fa-twitter",
+		"fa-brands fa-facebook",
+	];
+
+	// Lista de enlaces a las redes sociales
+	let enlaces = [
+		"https://www.linkedin.com",
+		"https://www.github.com",
+		"https://www.twitter.com",
+		"https://www.facebook.com",
+	];
+
+	// Creando el icono con sus respectivos enlaces.
+
+	let element = `<a	
+		class="text-white"
+		href="${enlaces[i]}"
+		target="_blank"
+		rel="noopener noreferrer"
+		><i class="${iconos[i]}"></i
+	></a>`;
+
+	// Agregando el icono a la caja de iconos del footer.
+	$("#icons-box").append(element);
+}
+
+````
+````
+// SECCION PRINCIPAL - Crear los iconos con enlaces a rrss
+	for (let i = 0; i <= 5; i++) {
+		crearIconosFooter(i);
+	}
+````
+
+
+
+
+### Propósito de las Funciones en la Programación
+
+- **Modularidad**: Cada función realiza una tarea específica y bien definida. Esto hace que el código sea más fácil de entender y mantener. Por ejemplo, `crearCard` se enfoca exclusivamente en la creación de tarjetas, lo que permite que otros desarrolladores comprendan rápidamente su propósito.
+
+- **Reutilización del Código**: Las funciones están diseñadas para ser reutilizables, lo que significa que pueden ser invocadas con diferentes valores para generar nuevos elementos sin necesidad de duplicar código. Esto no solo ahorra tiempo sino que también reduce la posibilidad de errores.
+
+- **Claridad**: Al separar el código en funciones, se logra un nivel de abstracción que ayuda a otros programadores a entender el flujo del programa sin tener que sumergirse en los detalles de implementación.
+
+- **Buenas Prácticas**: Estas funciones siguen buenas prácticas como la nomenclatura consistente y el uso de plantillas literales para la inserción de variables, lo que facilita la lectura y el manejo del código.
+
+- **Aporte a Programadores Iniciales**: Para un programador que está empezando, estudiar estas funciones puede ayudar a comprender cómo estructurar el código de manera eficiente y cómo manipular el DOM usando jQuery. Además, puede servir como un buen ejemplo de cómo documentar el código y escribir comentarios explicativos.
+
+
 
 ## Utilidad Educativa
 
@@ -47,7 +279,20 @@ Este proyecto es una excelente herramienta para nuevos programadores por varias 
 
 ## Instalación y Uso
 
-```bash
-git clone https://tu-repositorio/viajes-chile.git
-cd viajes-chile
-// Abre index.html en tu navegador
+1. Clona el repositorio: ``git clone https://github.com/marelycarcamo/ViajesChile.git``. <br>
+2. Accede a la carpeta del proyecto: ``cd viajeschile``. <br>
+3. Abre el archivo ``index.html`` en tu navegador.
+
+## Contribución
+
+¿Te gustaría contribuir a mi proyecto Viajes Chile? <br>
+¡Eres bienvenido! Puedes reportar errores, enviar nuevas funcionalidades o mejorar la documentación.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para detalles.
+
+
+## Viajes Chile © 2024. Proyecto educativo de código abierto.
+
+
