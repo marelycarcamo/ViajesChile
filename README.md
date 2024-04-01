@@ -14,8 +14,8 @@ https://github.com/marelycarcamo/ViajesChile.git
   - [Calidad del Código](#Calidad-del-Código)
   - [Proceso de Desarrollo](#Proceso-de-Desarrollo)
   - [Características del Sitio](#Características-del-Sitio)
-    - [**Barra de Menú Dinámica** <br>](#Barra-de-Menú-Dinámica-br)
-    - [**Smooth Scrolling**<br>](#Smooth-Scrolling-br)
+    - [**Barra de Menú Dinámica**](#Barra-de-Menú-Dinámica)
+    - [**Smooth Scrolling**](#Smooth-Scrolling-br)
     - [**Tooltips Informativos**](#Tooltips-Informativos)
     - [**Contenido Dinámico** <br>](#Contenido-Dinámico-br)
   - [Funciones JavaScript Destacadas](#Funciones-JavaScript-Destacadas)
@@ -45,7 +45,8 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 ## Características del Sitio
 
-### **Barra de Menú Dinámica** <br>
+### **Barra de Menú Dinámica**
+<br>
 Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
 
 Beneficios:
