@@ -15,7 +15,7 @@ https://github.com/marelycarcamo/ViajesChile.git
   - [Proceso de Desarrollo](#Proceso-de-Desarrollo)
   - [Características del Sitio](#Características-del-Sitio)
     - [**Barra de Menú Dinámica** <br>](#Barra-de-Menú-Dinámica-br)
-    - [**Smooth Scrolling**<br>](#Smooth-Scrollingbr)
+    - [**Smooth Scrolling**<br>](#Smooth-Scrolling-br)
     - [**Tooltips Informativos**](#Tooltips-Informativos)
     - [**Contenido Dinámico** <br>](#Contenido-Dinámico-br)
   - [Funciones JavaScript Destacadas](#Funciones-JavaScript-Destacadas)
