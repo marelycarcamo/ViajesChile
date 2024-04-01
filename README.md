@@ -102,7 +102,7 @@ En el HTML: <br>
 </li>
 ````
 En el CSS: <br>
-   Se activa el comportamiento de "scroll suave" para toda la página:
+   Se activa el comportamiento de "scroll suave" para toda la página:<br>
 
 ````
 /* CSS - SMOOTH SCROOL */
@@ -112,11 +112,19 @@ html {
 ````
 
 
-
+<br>
 - ### **Tooltips Informativos**
 Los Tooltips Informativos son pequeñas ventanas emergentes que aparecen al pasar el cursor sobre un elemento específico. Estos brindan información adicional de manera elegante y sin estorbar la visual general de la página.
+<br>
 
-![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/5d2fd3bf-91c1-4bf4-85fc-578d623ed229)
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/83924095-2633-4895-b92e-877e2f904cf4)
+
+<br>
+
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/f7dbfc54-3d20-4823-8b47-08adb5c76a42)
+
+
 
 
 Implementación Técnica
@@ -156,7 +164,7 @@ En Javascript:
 
 Se utiliza librería de Javascript de Bootstrap para inicializar los tooltips.
 Se seleccionan todos los elementos que tengan el atributo data-bs-toggle="tooltip" utilizando jQuery.
-Se recorre cada elemento y se inicializa un nuevo objeto Bootstrap Tooltip para cada uno.
+Se recorre cada elemento y se inicializa un nuevo objeto Bootstrap Tooltip para cada uno. <br>
 
 ````
 	// Tooltips
@@ -165,7 +173,7 @@ Se recorre cada elemento y se inicializa un nuevo objeto Bootstrap Tooltip para 
 		new bootstrap.Tooltip(tooltipTriggerEl);
 	});
 ````
-
+<br>
 Nota:
 
 Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y Javascript) en tu proyecto.
@@ -175,24 +183,25 @@ Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y J
 - ### **Contenido Dinámico** <br>
   Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
   ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/9b20cb10-dfcb-49e7-9448-6b5d772e9e79)
-
-
+<br>
 
 ## Funciones JavaScript Destacadas
 
-### Función `crearTarjeta`
-Función crearTarjeta: Esta función genera tarjetas con contenido de imagen y texto dinámicos, que se añaden a un contenedor específico en la página web.
 
-### Función `crearIconosRRSS`
-`crearIconosRRSS` crea iconos de redes sociales con enlaces correspondientes y los añade a un contenedor en el pie de página. El parámetro `i` se utiliza como índice para seleccionar el icono y el enlace adecuados de los arrays proporcionados.
+### `crearCard(i)`
+Esta función genera una nueva tarjeta con una imagen y texto predeterminado. Utiliza una base URL para las imágenes y las numera secuencialmente. La tarjeta se compone de una imagen y un cuerpo con un título y un texto de relleno. Finalmente, se añade al contenedor `#tarjetas-destacados`.
 
-![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/62ff1e2a-e206-436b-99e2-a05a80537bc2)
+### `crearArticle(i)`
+`crearArticle` crea un nuevo artículo que incluye un ícono y un párrafo de texto. Los íconos y el texto se alternan en posición dependiendo de si el índice `i` es par o impar. El artículo completo se agrega al contenedor `#article-box`.
 
-Ventajas:
-1. **Reutilización de código:** Solo necesitas llamar a la función con el índice correspondiente al icono y al enlace que deseas crear.
-2. **Separación de datos y lógica:** Esto hace que el código sea más fácil de leer y mantener. Si necesitas agregar una nueva red social, solo tienes que agregarla a las listas iconos y enlaces.
-3. **Seguridad:** Usar rel="noopener noreferrer" en un enlace es como cerrar una puerta detrás de ti al salir. Ayuda a mantener tu navegación segura.
-4. **Accesibilidad:** Al usar target="_blank", los enlaces se abrirán en una nueva pestaña o ventana. Esto permite a los usuarios volver a tu página fácilmente.
+### Función `crearIconosFooter(i)`
+La función `crearIconosFooter` se encarga de agregar íconos de redes sociales al pie de página. Cada ícono está vinculado a su respectiva red social y se inserta dentro del contenedor `#icons-box`.
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/79e762d2-417b-4589-b7f9-87c75c2390ae) <br>
+
+
+
+
 
 
 ````
@@ -235,8 +244,21 @@ function crearIconosFooter(i) {
 	}
 ````
 
-### Función `crearArticle`
-La función `crearArticle` crea artículos dinámicamente con iconos y texto, alternando sus posiciones basándose en el índice proporcionado. El parámetro `i` determina qué icono mostrar en el artículo.
+
+
+
+### Propósito de las Funciones en la Programación
+
+- **Modularidad**: Cada función realiza una tarea específica y bien definida. Esto hace que el código sea más fácil de entender y mantener. Por ejemplo, `crearCard` se enfoca exclusivamente en la creación de tarjetas, lo que permite que otros desarrolladores comprendan rápidamente su propósito.
+
+- **Reutilización del Código**: Las funciones están diseñadas para ser reutilizables, lo que significa que pueden ser invocadas con diferentes valores para generar nuevos elementos sin necesidad de duplicar código. Esto no solo ahorra tiempo sino que también reduce la posibilidad de errores.
+
+- **Claridad**: Al separar el código en funciones, se logra un nivel de abstracción que ayuda a otros programadores a entender el flujo del programa sin tener que sumergirse en los detalles de implementación.
+
+- **Buenas Prácticas**: Estas funciones siguen buenas prácticas como la nomenclatura consistente y el uso de plantillas literales para la inserción de variables, lo que facilita la lectura y el manejo del código.
+
+- **Aporte a Programadores Iniciales**: Para un programador que está empezando, estudiar estas funciones puede ayudar a comprender cómo estructurar el código de manera eficiente y cómo manipular el DOM usando jQuery. Además, puede servir como un buen ejemplo de cómo documentar el código y escribir comentarios explicativos.
+
 
 
 ## Utilidad Educativa
