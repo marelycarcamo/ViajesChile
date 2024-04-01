@@ -32,7 +32,7 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 En el HTML: <br>
 1. Asignamos un id a la sección formulario: ``<section id="form-section">``
-2. En la barra de menú, se agrega un enlace a la sección Formulario  **href='#form-section'**
+2. En la barra de menú, se agrega un enlace a la sección Formulario ``href='#form-section'``
 ````
 <li class="nav-item">
 	<a class="nav-link text-white" href="#form-section">Contacto</a>
@@ -49,8 +49,59 @@ html {
 ````
 
 
+
+Tooltips Informativos
+Los Tooltips Informativos son pequeñas ventanas emergentes que aparecen al pasar el cursor sobre un elemento específico. Estos brindan información adicional de manera elegante y sin estorbar la visual general de la página.
+
+Implementación Técnica
+
+En HTML:
+
+Se agrega la clase form-control al elemento textarea para darle estilo básico.<br>
+Se utilizan atributos de data personalizados de Bootstrap para configurar el tooltip: <br>
+	- `data-bs-custom-class="custom-tooltip"`: Define una clase CSS personalizada para aplicar estilos específicos al tooltip. <br>
+	- `data-bs-toggle="tooltip"`: Habilita la funcionalidad del tooltip. <br>
+	- `data-bs-placement="bottom"`: Indica la posición del tooltip (en este caso, debajo del elemento). <br>
+	- `title="Consulte por nuestras promociones y descuentos"`: Define el texto que se mostrará en el tooltip.<br>
+
+````
+<textarea class="form-control"
+		 data-bs-custom-class="custom-tooltip"
+		 data-bs-toggle="tooltip"
+		 data-bs-placement="bottom"
+		title="Consulte por nuestras promociones y descuentos"
+		></textarea>
+````
+
+En CSS:
+
+Se crea una clase CSS custom-tooltip para personalizar la apariencia del tooltip.
+Se utilizan variables de Bootstrap para definir el color de fondo (--bs-tooltip-bg) y el color del texto (--bs-tooltip-color) del tooltip.
+
+````
+/* aplica colores a tootip del formulario  */
+.custom-tooltip {
+	--bs-tooltip-bg: rgba(0, 234, 255, 0.943);
+	--bs-tooltip-color: white;
+}
+````
+
+En Javascript:
+
+Se utiliza librería de Javascript de Bootstrap para inicializar los tooltips.
+Se seleccionan todos los elementos que tengan el atributo data-bs-toggle="tooltip" utilizando jQuery.
+Se recorre cada elemento y se inicializa un nuevo objeto Bootstrap Tooltip para cada uno.
+
+En el JS:
+````
+	// Tooltips
+	const tooltipTrigger = $('[data-bs-toggle="tooltip"]');
+	$.each(tooltipTrigger, function (index, tooltipTriggerEl) {
+		new bootstrap.Tooltip(tooltipTriggerEl);
+	});
+````
+
   
-- **Tooltips Informativos**: Proporcionan información adicional de manera elegante y eficiente.
 - **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código.
 
 ## Funciones JavaScript Destacadas
