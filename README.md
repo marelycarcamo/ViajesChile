@@ -6,10 +6,6 @@
 
 
 
-
-
-
-
 https://github.com/marelycarcamo/ViajesChile.git
 
 
@@ -27,8 +23,28 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 ## Características del Sitio
 
-- **Barra de Menú Dinámica**: Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
-- **Smooth Scrolling**: Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
+### **Barra de Menú Dinámica** <br>
+Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
+
+  ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/b32a5e06-92db-4faa-8389-eb174c8e6142)
+  ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/278346f6-192a-41e6-a14f-bcb9f74ecf87)
+
+  ````
+  // HEADER - Función para cambiar color del menú al descender
+	$(window).scroll(function () {
+		var navbar = $("#navbar");
+		var scroll = $(window).scrollTop();
+		if (scroll > 0) {
+			// Cambia el color cuando se comienza a desplazar hacia abajo
+			navbar.css("background-color", "rgba(0, 0, 0, 0.7)"); // Cambia el fondo a negro con 70% de opacidad
+		} else {
+			navbar.css("background-color", "transparent"); // De lo contrario, hazlo transparente
+		}
+	});
+  ````
+
+### **Smooth Scrolling**<br>
+Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
 
 En el HTML: <br>
 1. Asignamos un id a la sección formulario: ``<section id="form-section">``
@@ -50,8 +66,11 @@ html {
 
 
 
-Tooltips Informativos
+### **Tooltips Informativos**
 Los Tooltips Informativos son pequeñas ventanas emergentes que aparecen al pasar el cursor sobre un elemento específico. Estos brindan información adicional de manera elegante y sin estorbar la visual general de la página.
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/5d2fd3bf-91c1-4bf4-85fc-578d623ed229)
+
 
 Implementación Técnica
 
@@ -92,7 +111,6 @@ Se utiliza librería de Javascript de Bootstrap para inicializar los tooltips.
 Se seleccionan todos los elementos que tengan el atributo data-bs-toggle="tooltip" utilizando jQuery.
 Se recorre cada elemento y se inicializa un nuevo objeto Bootstrap Tooltip para cada uno.
 
-En el JS:
 ````
 	// Tooltips
 	const tooltipTrigger = $('[data-bs-toggle="tooltip"]');
@@ -101,8 +119,13 @@ En el JS:
 	});
 ````
 
+Nota:
+
+Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y Javascript) en tu proyecto.
+
+<br>
   
-- **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código.
+### **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
 
 ## Funciones JavaScript Destacadas
 
