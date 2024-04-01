@@ -31,7 +31,11 @@ Mejora la experiencia de usuario al navegar por el sitio web.
 Permite un acceso rápido a las diferentes secciones del sitio.
 Aporta un toque de dinamismo y modernidad al diseño.
 
+imagen-menu-1
+
   ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/dabbdf95-6a52-4f4d-9c76-3bd0b9c61c29)
+
+imagen-menu-2
 
 ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/cddcf1da-bd1c-4438-a585-5ce825247354)
 
@@ -39,18 +43,25 @@ Aporta un toque de dinamismo y modernidad al diseño.
   ````
 
 // Función para cambiar color del menú al descender
+
+	// Almacena el elemento HTML de la barra de menú
+	const $navbar = $(".navbar");
+
+	// Función para cambiar el color del menú al desplazarse
 	$(window).scroll(function () {
-		var navbar = $("#navbar");
-		var scroll = $(window).scrollTop();
+		const scroll = $(window).scrollTop();
+
 		if (scroll > 0) {
-			// Cambia el color cuando se comienza a desplazar hacia abajo
-			navbar.css("background-color", "rgba(0, 0, 0, 0.7)"); // Cambia el fondo a negro con 70% de opacidad
-			navbar.addClass("scrolled"); // Agrega la clase 'scrolled'
+			// Cambia el color de fondo y agrega la clase 'scrolled'
+			$navbar.css("background-color", "rgba(0, 0, 0, 0.7)");
+			$navbar.addClass("scrolled");
 		} else {
-			navbar.css("background-color", "transparent"); // De lo contrario, hazlo transparente
-			navbar.removeClass("scrolled"); // Elimina la clase 'scrolled'
+			// Restablece el color de fondo y elimina la clase 'scrolled'
+			$navbar.css("background-color", "transparent");
+			$navbar.removeClass("scrolled");
 		}
 	});
+
   ````
 
 En el CSS:
@@ -61,21 +72,23 @@ Atención a la clase 'scrolled' esta asocia el cambio de color del :hover con el
 	color: white; /* Color del texto del menú */
 	transition: background-color 0.5s ease; /* Transición suave */
 }
+````
+
+Ver imagen-menu-1
+````
 
 .navbar a:hover {
 	background-color: black; /* Cambia el fondo a negro al pasar el cursor */
 	color: white; /* Cambia el color del texto a blanco al pasar el cursor */
 }
-
+````
+Ver imagen-menu-2
+````
 .navbar.scrolled a:hover {
 	background-color: rgba(0,234,255,0.943); /* Cambia el fondo al pasar el cursor cuando se ha desplazado hacia abajo */
 	color: white; /* Mantiene el color del texto en blanco al pasar el cursor cuando se ha desplazado hacia abajo */
 }
-
 ````
-
-
-
 
 - ### **Smooth Scrolling**<br>
 Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
@@ -159,7 +172,10 @@ Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y J
 
 <br>
   
-- ### **Contenido Dinámico**: Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
+- ### **Contenido Dinámico** <br>
+  Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
+  ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/9b20cb10-dfcb-49e7-9448-6b5d772e9e79)
+
 
 
 ## Funciones JavaScript Destacadas
@@ -169,10 +185,14 @@ Función crearTarjeta: Esta función genera tarjetas con contenido de imagen y t
 
 ### Función `crearIconosRRSS`
 `crearIconosRRSS` crea iconos de redes sociales con enlaces correspondientes y los añade a un contenedor en el pie de página. El parámetro `i` se utiliza como índice para seleccionar el icono y el enlace adecuados de los arrays proporcionados.
+
+![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/62ff1e2a-e206-436b-99e2-a05a80537bc2)
+
+Ventajas:
 1. **Reutilización de código:** Solo necesitas llamar a la función con el índice correspondiente al icono y al enlace que deseas crear.
 2. **Separación de datos y lógica:** Esto hace que el código sea más fácil de leer y mantener. Si necesitas agregar una nueva red social, solo tienes que agregarla a las listas iconos y enlaces.
 3. **Seguridad:** Usar rel="noopener noreferrer" en un enlace es como cerrar una puerta detrás de ti al salir. Ayuda a mantener tu navegación segura.
-4. Accesibilidad: Al usar target="_blank", los enlaces se abrirán en una nueva pestaña o ventana. Esto permite a los usuarios volver a tu página fácilmente.
+4. **Accesibilidad:** Al usar target="_blank", los enlaces se abrirán en una nueva pestaña o ventana. Esto permite a los usuarios volver a tu página fácilmente.
 
 
 ````
