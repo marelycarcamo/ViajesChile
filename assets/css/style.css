@@ -3,16 +3,16 @@
 	margin: 0px;
 }
 
+/* SMOOTH SCROOL */
 html {
 	scroll-behavior: smooth;
 }
 
-body,
 .roboto-light {
 	font-family: "Roboto", sans-serif;
 	font-weight: 300;
 	font-style: normal;
-	font-size: 20px;
+	font-size: 1.2em;
 }
 
 .bg-viajes {
@@ -20,7 +20,7 @@ body,
 }
 
 h2 {
-	margin-block: 60px;
+	margin-block: 32px;
 }
 
 /* ******************************************************************* */
@@ -28,57 +28,39 @@ h2 {
 
 /* Definir altura máxima de las imágenes */
 .carousel-item img {
-	width: 100%;
-	height: auto;
 	max-height: 740px;
 }
 
 /* ******************************************************************* */
 /* ********************* N A V B A R ********************************* */
 
-#container-navbar {
-}
-
 #logo img {
 	max-width: 10%;
 }
 
-.navbar-nav {
-	/* position: absolute;
-	right: 20px; */
-	/* border: 1px solid red; */
-}
-
 #navbar {
-	top: 0;
 	z-index: 1000; /* Esto asegura que el menú esté por encima de otros elementos, como un carrusel */
 	transition: background-color 0.5s ease;
-	display: flex;
-	justify-content: space-evenly;
 }
 
+/* Estilo predeterminado de los enlaces */
 .navbar a {
-	color: white; /* Color del texto del menú */
+	color: white;
 	transition: background-color 0.5s ease; /* Transición suave */
 }
-
+/* Estilo de los enlaces al pasar el cursor */
 .navbar a:hover {
-	background-color: black; /* Cambia el fondo a negro al pasar el cursor */
-	color: white; /* Cambia el color del texto a blanco al pasar el cursor */
+	background-color: black; 
 }
 
+/* Estilo de los enlaces al pasar el cursor al desplazarse */
 .navbar.scrolled a:hover {
-	background-color: rgba(
-		0,
-		234,
-		255,
-		0.943
-	); /* Cambia el fondo a 'aqua' al pasar el cursor cuando se ha desplazado hacia abajo */
-	color: white; /* Mantiene el color del texto en blanco al pasar el cursor cuando se ha desplazado hacia abajo */
+	background-color: rgba(0,234,255,0.943); 
+	color: white; 
 }
 
 li {
-	font-size: 20px;
+	font-size: 1.26em;
 }
 
 /* ******************************************************************* */
@@ -96,24 +78,16 @@ li {
 	opacity: 100%; /* Oscurecemos la card */
 }
 
-/* Centra la card dentro de la columna */
-.row div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 .card-body p {
-	font-size: 18px;
+	font-size: 1em;
 }
 /* Fijar altura máxima para las card */
 .card img {
-	width: 100%;
-	height: auto;
 	max-height: 190px;
 }
 
-/* ****************** FORMULARIO ********************* */
+/* ************************************************************************ */
+/* ******************************* FORMULARIO ***************************** */
 
 /* Definimos el estilo inicial de la caja de texto y el textarea */
 input[type="text"],
@@ -129,16 +103,12 @@ textarea:focus {
 
 /* Definimos el estilo inicial del botón */
 .btn {
-	background-color: rgba(0, 234, 255, 0.943);
-	opacity: 80%;
-	color: white;
-	border: none;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
-	transition: transform 0.5s; /* Animación */
+	font-size: 1.2em;
+	transition: transform 0.6s; /* Animación */
 	cursor: pointer;
 }
 
@@ -151,7 +121,13 @@ textarea:focus {
 	opacity: 100%;
 }
 
-/* ********* F O O T E R *********** */
+form div * {
+		font-size: 1.25em;
+
+}
+
+/* ******************************************************************** */
+/* *************************** F O O T E R **************************** */
 
 footer {
 	height: 100px;
@@ -160,7 +136,7 @@ footer {
 }
 
 footer div p {
-	font-size: 30px;
+	font-size: 1.8em;
 }
 
 h3 :hover {
@@ -172,25 +148,23 @@ footer div a :hover {
 }
 
 i {
-	font-size: 30px;
+	font-size: 1.9em;
 	padding-inline: 5px;
 }
 
+/* aplica colores a tootip del formulario  */
 .custom-tooltip {
 	--bs-tooltip-bg: rgba(0, 234, 255, 0.943);
 	--bs-tooltip-color: white;
 }
 
-/* 
-************ M E D I A -  Q U E R Y ****************/
+/****************************************************************************** 
+******************* ******* M E D I A -  Q U E R Y ****************************/
 
 @media only screen and (max-width: 576px) {
 	ul :nth-child(2),
 	#quienes-somos-section {
 		display: none;
-		/* font-size: 16px;
-		background-color: black;
-		opacity: 60%; */
 	}
 
 	.container-navbar {
@@ -204,11 +178,11 @@ i {
 	}
 
 	h1 {
-		font-size: 16px;
+		font-size: 1em;
 	}
 
 	li {
-		font-size: 12px;
+		font-size: 0.75em;
 	}
 
 	.card {

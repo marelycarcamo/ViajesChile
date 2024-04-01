@@ -14,10 +14,10 @@ https://github.com/marelycarcamo/ViajesChile.git
   - [Calidad del Código](#Calidad-del-Código)
   - [Proceso de Desarrollo](#Proceso-de-Desarrollo)
   - [Características del Sitio](#Características-del-Sitio)
-    - [**Barra de Menú Dinámica** <br>](#Barra-de-Menú-Dinámica-br)
-    - [**Smooth Scrolling**<br>](#Smooth-Scrollingbr)
+    - [**Barra de Menú Dinámica**](#Barra-de-Menú-Dinámica)
+    - [**Smooth Scrolling**](#Smooth-Scrolling)
     - [**Tooltips Informativos**](#Tooltips-Informativos)
-    - [**Contenido Dinámico** <br>](#Contenido-Dinámico-br)
+    - [**Contenido Dinámico**](#Contenido-Dinámico)
   - [Funciones JavaScript Destacadas](#Funciones-JavaScript-Destacadas)
     - [`crearCard(i)`](#crearCardi)
     - [`crearArticle(i)`](#crearArticlei)
@@ -45,7 +45,8 @@ El desarrollo del sitio web se realizó en etapas, desde la conceptualización h
 
 ## Características del Sitio
 
-### **Barra de Menú Dinámica** <br>
+### **Barra de Menú Dinámica**
+<br>
 Una barra de navegación que cambia de color al desplazarse, mejorando la experiencia del usuario y la accesibilidad del sitio.
 
 Beneficios:
@@ -62,9 +63,13 @@ imagen-menu-2
 ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/cddcf1da-bd1c-4438-a585-5ce825247354)
 
 
+
+En el JAVASCRIPT
+Implementamos una función que detecta el desplazamiento del usuario y cambia el color de la barra de menú en consecuencia:
+
   ````
 
-// Función para cambiar color del menú al descender
+// Javascript. Función para cambiar color del menú al descender
 
 	// Almacena el elemento HTML de la barra de menú
 	const $navbar = $(".navbar");
@@ -86,33 +91,39 @@ imagen-menu-2
 
   ````
 
-En el CSS:
-Atención a la clase 'scrolled' esta asocia el cambio de color del :hover con el desplazamiento del menú.
+En el CSS
+La clase .scrolled se utiliza para cambiar el estilo de los enlaces dentro de la barra de menú cuando el usuario se desplaza:
 ````
-
+/* Estilo predeterminado de los enlaces */
 .navbar a {
-	color: white; /* Color del texto del menú */
-	transition: background-color 0.5s ease; /* Transición suave */
+  color: white;
+  transition: background-color 0.5s ease;
 }
 ````
 
 Ver imagen-menu-1
 ````
-
+/* Estilo de los enlaces al pasar el cursor */
 .navbar a:hover {
-	background-color: black; /* Cambia el fondo a negro al pasar el cursor */
-	color: white; /* Cambia el color del texto a blanco al pasar el cursor */
+	background-color: black; 
+	color: white; 
 }
 ````
 Ver imagen-menu-2
 ````
+/* Estilo de los enlaces al pasar el cursor después de desplazarse */
 .navbar.scrolled a:hover {
-	background-color: rgba(0,234,255,0.943); /* Cambia el fondo al pasar el cursor cuando se ha desplazado hacia abajo */
-	color: white; /* Mantiene el color del texto en blanco al pasar el cursor cuando se ha desplazado hacia abajo */
+	background-color: rgba(0,234,255,0.943); 
+	color: white; 
 }
 ````
+Con esta implementación, la barra de menú responde al comportamiento de desplazamiento del usuario, mejorando la interactividad y el aspecto visual del sitio.
 
-### **Smooth Scrolling**<br>
+<br>
+
+
+### **Smooth Scrolling**
+<br>
 Crea una experiencia más natural y fluida al navegar por el sitio. Elimina los saltos bruscos al navegar entre diferentes secciones.
 
 En el HTML: <br>
@@ -127,7 +138,7 @@ En el CSS: <br>
    Se activa el comportamiento de "scroll suave" para toda la página:<br>
 
 ````
-/* CSS - SMOOTH SCROOL */
+/* CSS - Smooth Scrolling */
 html {
 	scroll-behavior: smooth;
 }
@@ -149,9 +160,9 @@ Los Tooltips Informativos son pequeñas ventanas emergentes que aparecen al pasa
 
 
 
-Implementación Técnica
+**Implementación Técnica**
 
-En HTML:
+En HTML
 
 Se agrega la clase form-control al elemento textarea para darle estilo básico.<br>
 Se utilizan atributos de data personalizados de Bootstrap para configurar el tooltip: <br>
@@ -169,7 +180,7 @@ Se utilizan atributos de data personalizados de Bootstrap para configurar el too
 		></textarea>
 ````
 
-En CSS:
+En CSS
 
 Se crea una clase CSS custom-tooltip para personalizar la apariencia del tooltip.
 Se utilizan variables de Bootstrap para definir el color de fondo (--bs-tooltip-bg) y el color del texto (--bs-tooltip-color) del tooltip.
@@ -182,7 +193,7 @@ Se utilizan variables de Bootstrap para definir el color de fondo (--bs-tooltip-
 }
 ````
 
-En Javascript:
+En Javascript
 
 Se utiliza librería de Javascript de Bootstrap para inicializar los tooltips.
 Se seleccionan todos los elementos que tengan el atributo data-bs-toggle="tooltip" utilizando jQuery.
@@ -202,7 +213,8 @@ Este código asume que ya tienes incluídas las librerías de Bootstrap (CSS y J
 
 <br>
   
-### **Contenido Dinámico** <br>
+### **Contenido Dinámico**
+<br>
   Creación de artículos, tarjetas destacadas e iconos de redes sociales mediante funciones JavaScript que fomentan la reutilización del código. <br>
   ![image](https://github.com/marelycarcamo/ViajesChile/assets/44790921/9b20cb10-dfcb-49e7-9448-6b5d772e9e79)
 <br>
@@ -260,7 +272,7 @@ function crearIconosFooter(i) {
 
 ````
 ````
-// SECCION PRINCIPAL - Crear los iconos con enlaces a rrss
+// Sección principal - Crear los iconos con enlaces a rrss
 	for (let i = 0; i <= 5; i++) {
 		crearIconosFooter(i);
 	}
@@ -315,7 +327,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para detalles.
 
 
 ## Viajes Chile © 2024. Proyecto educativo de código abierto.
-<a id="Viajes-Chile-©-2024-Proyecto-educativo-de-código-abierto"> </a>
+
 
 
 
